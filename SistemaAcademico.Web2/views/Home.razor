@@ -1,0 +1,38 @@
+﻿@page "/dashboard"
+
+<PageTitle>Dashboard</PageTitle>
+
+<h1 class="text-primary">📊 Dashboard Acadêmico</h1>
+
+<p>Bem-vindo ao painel de controle! Aqui estão os cursos e a quantidade de alunos matriculados.</p>
+
+<div class="row">
+    @foreach (var curso in Cursos)
+    {
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@curso.Nome</h5>
+                    <p class="card-text">👨‍🎓 Alunos matriculados: <strong>@curso.QuantidadeAlunos</strong></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Curso> Cursos = new()
+    {
+        new Curso { Nome = "Engenharia de Software", QuantidadeAlunos = 120 },
+        new Curso { Nome = "Ciência da Computação", QuantidadeAlunos = 95 },
+        new Curso { Nome = "Administração", QuantidadeAlunos = 80 },
+        new Curso { Nome = "Direito", QuantidadeAlunos = 110 },
+        new Curso { Nome = "Medicina", QuantidadeAlunos = 150 }
+    };
+
+    private class Curso
+    {
+        public string Nome { get; set; } = string.Empty;
+        public int QuantidadeAlunos { get; set; }
+    }
+}

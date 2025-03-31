@@ -1,0 +1,765 @@
+[
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.AlunoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsAluno\u003Eb__0_0",
+    "RelativePath": "Aluno/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.AlunoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsAluno\u003Eb__0_2",
+    "RelativePath": "Aluno/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoRequest",
+        "Type": "SistemaAcademico.Request.AlunoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.AlunoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsAluno\u003Eb__0_1",
+    "RelativePath": "Aluno/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.AlunoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsAluno\u003Eb__0_3",
+    "RelativePath": "Aluno/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.AlunoEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.AlunoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsAluno\u003Eb__0_4",
+    "RelativePath": "Aluno/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.CursoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsCurso\u003Eb__0_0",
+    "RelativePath": "Curso/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.CursoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsCurso\u003Eb__0_2",
+    "RelativePath": "Curso/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cursorequest",
+        "Type": "SistemaAcademico.Request.CursoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.CursoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsCurso\u003Eb__0_1",
+    "RelativePath": "Curso/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.CursoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsCurso\u003Eb__0_3",
+    "RelativePath": "Curso/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.CursoEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.CursoExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsCurso\u003Eb__0_4",
+    "RelativePath": "Curso/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.DisciplinaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsDisciplina\u003Eb__0_0",
+    "RelativePath": "Disciplina/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.DisciplinaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsDisciplina\u003Eb__0_2",
+    "RelativePath": "Disciplina/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DiscRequest",
+        "Type": "SistemaAcademico.Request.DisciplinaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.DisciplinaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsDisciplina\u003Eb__0_1",
+    "RelativePath": "Disciplina/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.DisciplinaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsDisciplina\u003Eb__0_3",
+    "RelativePath": "Disciplina/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.DisciplinaEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.DisciplinaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsDisciplina\u003Eb__0_4",
+    "RelativePath": "Disciplina/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsMatricula\u003Eb__0_0",
+    "RelativePath": "Matricula/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsMatricula\u003Eb__0_2",
+    "RelativePath": "Matricula/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matriRequest",
+        "Type": "SistemaAcademico.Request.MatriculaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsMatricula\u003Eb__0_1",
+    "RelativePath": "Matricula/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsMatricula\u003Eb__0_3",
+    "RelativePath": "Matricula/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.MatriculaEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsMatricula\u003Eb__0_4",
+    "RelativePath": "Matricula/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.NotaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsNota\u003Eb__0_0",
+    "RelativePath": "Nota/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.NotaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsNota\u003Eb__0_2",
+    "RelativePath": "Nota/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notaReque",
+        "Type": "SistemaAcademico.Request.NotaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.NotaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsNota\u003Eb__0_1",
+    "RelativePath": "Nota/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.NotaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsNota\u003Eb__0_3",
+    "RelativePath": "Nota/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.NotaEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.NotaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsNota\u003Eb__0_4",
+    "RelativePath": "Nota/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.ProfessorExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsProfessor\u003Eb__0_0",
+    "RelativePath": "Professor/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.ProfessorExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsProfessor\u003Eb__0_2",
+    "RelativePath": "Professor/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Profrequest",
+        "Type": "SistemaAcademico.Request.ProfessorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.ProfessorExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsProfessor\u003Eb__0_1",
+    "RelativePath": "Professor/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.ProfessorExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsProfessor\u003Eb__0_3",
+    "RelativePath": "Professor/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.ProfessorEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.ProfessorExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsProfessor\u003Eb__0_4",
+    "RelativePath": "Professor/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsTurma\u003Eb__0_0",
+    "RelativePath": "Turma/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsTurma\u003Eb__0_2",
+    "RelativePath": "Turma/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TurmaRe",
+        "Type": "SistemaAcademico.Request.TurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsTurma\u003Eb__0_1",
+    "RelativePath": "Turma/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsTurma\u003Eb__0_3",
+    "RelativePath": "Turma/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.TurmaEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsTurma\u003Eb__0_4",
+    "RelativePath": "Turma/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
