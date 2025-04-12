@@ -1,0 +1,150 @@
+﻿@page "/Matricula"
+
+
+@inject AlunoAPI alunoAPI
+@inject MatriculaAPI MatriculaAPI
+@inject CursoAPI CursoAPI
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+
+
+
+<MudStack Class="mt-4 mb-4" Row="true" Justify="Justify.SpaceBetween">
+    <MudText Class="mb-4" Typo="Typo.h4">Matriculas</MudText>
+    <MudPagination Count="@totalPaginas" SelectedChanged="PaginaMudou"></MudPagination>
+</MudStack>
+
+@if (!string.IsNullOrEmpty(MensagemAlerta))
+{
+    <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+}
+
+@if (MatriculaPorPagina is not null)
+{
+    <MudTable Items="MatriculaPorPagina" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Matricula</MudTh>
+            <MudTh>Aluno</MudTh>
+            <MudTh>Curso</MudTh>
+            <MudTh>Data</MudTh>
+            <MudTh>Status</MudTh>
+            <MudTh></MudTh> 
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Matricula">@context.Id_Matricula</MudTd>
+            <MudTd DataLabel="Aluno">
+                @if (Aluno != null)
+                {
+                    var Alunos = Aluno.FirstOrDefault(e => e.Id_Aluno == context.Id_aluno);
+
+                    if (Alunos != null)
+                    {
+                        @Alunos.nome
+                    }
+                }
+
+            </MudTd>
+
+            <MudTd DataLabel="Curso">
+                @if (Curso != null)
+                {
+                    var Cursos = Curso.FirstOrDefault(e => e.Id_Curso == context.IdCurso);
+
+                    if (Cursos != null)
+                    {
+                        @Cursos.nome
+
+                    }
+                }
+
+            </MudTd>
+            <MudTd DataLabel="Data">@context.Data_Matricula</MudTd>
+            <MudTd DataLabel="Status">@context.Status_Matricula</MudTd>
+            <MudTd>
+                <MudTooltip Text="Adicionar">  <MudFab Color="Color.Success" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" @onclick="AdicionarMatricula" /> </MudTooltip>
+                <MudTooltip Text="Editar">  <MudFab Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small" @onclick="() => UpdateMatricula(context.Id_Matricula)" /></MudTooltip>
+                <MudTooltip Text="Deletar">  <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small" @onclick="() => onDeleteClick(context.Id_Matricula)" /></MudTooltip>
+
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+@code {
+    private ICollection<AlunoResponse>? Aluno;
+    private ICollection<CursoResponse>? Curso;
+    private ICollection<MatriculaResponse>? Matriculas;
+    private int tamanho = 8;
+    private int TotalItens;
+    private int totalPaginas;
+    private ICollection<MatriculaResponse>? MatriculaPorPagina;
+    private int paginaAtual = 1;
+    private string MensagemAlerta = string.Empty;
+    private bool sucesso = false;
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Aluno = await alunoAPI.GetAlunosAsync();
+        Matriculas = await MatriculaAPI.GetMatriculaAsync();
+        Curso = await CursoAPI.GetCursoAsync();
+
+
+
+        if (Matriculas != null)
+        {
+            Matriculas = Matriculas.OrderByDescending(u => u.Id_Matricula).ToList();
+            TotalItens = Matriculas.Count();
+            totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+            PaginaMudou(1);
+        }
+    }
+
+    public void AdicionarMatricula()
+    {
+        navigationManager.NavigateTo("/CadastrarMatricula");
+    }
+
+    public void UpdateMatricula(int id)
+    {
+        navigationManager.NavigateTo($"/EditarMatricula/{id}");
+    }
+
+
+    public async Task onDeleteClick(int id)
+    {
+        var result = await alunoAPI.DeleteAlunoAsync(id);
+
+        if (result)
+        {
+
+            var MatriculaRemove = Matriculas!.FirstOrDefault(e => e.Id_Matricula == id);
+
+            if (MatriculaRemove != null)
+            {
+                Matriculas.Remove(MatriculaRemove);
+                TotalItens = Matriculas.Count();
+                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                PaginaMudou(paginaAtual);
+
+            }
+
+        }
+        StateHasChanged();
+    }
+
+
+    private void PaginaMudou(int pageNumber)
+    {
+
+        paginaAtual = pageNumber;
+        var indice = (paginaAtual - 1) * tamanho;
+        MatriculaPorPagina = Matriculas!
+            .Skip(indice)
+            .Take(tamanho)
+            .ToList();
+    }
+
+}

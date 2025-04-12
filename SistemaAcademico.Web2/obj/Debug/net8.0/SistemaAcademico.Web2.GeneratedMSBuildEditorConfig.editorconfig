@@ -26,16 +26,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = dmlld3NcQ291bnRlci5yYXpvcg==
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Alunos.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcQWx1bm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = dmlld3NcSG9tZS5yYXpvcg==
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Cadastro/CadastrarAluno.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcQ2FkYXN0cm9cQ2FkYXN0cmFyQWx1bm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = dmlld3NcV2VhdGhlci5yYXpvcg==
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Cadastro/CadastrarMatricula.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcQ2FkYXN0cm9cQ2FkYXN0cmFyTWF0cmljdWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Matricula.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcTWF0cmljdWxhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/_Imports.razor]

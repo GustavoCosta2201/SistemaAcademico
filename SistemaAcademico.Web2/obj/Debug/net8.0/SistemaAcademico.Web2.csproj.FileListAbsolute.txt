@@ -1,9 +1,9 @@
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.csproj.AssemblyReference.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.GeneratedMSBuildEditorConfig.editorconfig
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.AssemblyInfoInputs.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.AssemblyInfo.cs
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.csproj.CoreCompileInputs.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.MvcApplicationPartsAssemblyInfo.cache
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.sourcelink.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
@@ -636,6 +636,7 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\dotnet.
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\icudt_CJK.dat
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\bin\Debug\net8.0\icudt_no_CJK.dat
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.csproj.AssemblyReference.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm

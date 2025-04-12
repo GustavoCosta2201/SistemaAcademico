@@ -1,0 +1,115 @@
+﻿@page "/CadastrarMatricula"
+
+@inject NavigationManager navigationManager
+@inject AlunoAPI AlunoAPI
+@inject MatriculaAPI MatriculaAPI
+@inject CursoAPI CursoAPI
+
+<MudPaper Class="px-8 pt-6 pb-8 mx-12 my-8" Elevation="3" Square="true">
+
+    <MudText Class="mt-8" Typo="Typo.h4">Cadastro de Matricula</MudText>
+
+    @if (sucesso)
+    {
+        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">Matricula cadastrada com sucesso!</MudAlert>
+    }
+
+    @if (!string.IsNullOrEmpty(MensagemAlerta) && CamposVazios())
+    {
+        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+    }
+
+    <MudForm Class="mt-6">
+
+
+        <MudSelect T="int" Label="Aluno" @bind-Value="Id_Aluno" Class="mt-4" Required="true" RequiredError="Campo obrigatório.">
+            @if (Aluno != null && Aluno.Any())
+            {
+                @foreach (var A in Aluno)
+                {
+                    <MudSelectItem Value="A.Id_Aluno">@A.nome</MudSelectItem>
+                }
+            }
+            else
+            {
+                <MudSelectItem Value="0">Nenhuma categoria encontrada</MudSelectItem>
+            }
+        </MudSelect>
+
+        <MudSelect T="int" Label="Curso" @bind-Value="Id_Curso" Class="mt-4" Required="true" RequiredError="Campo obrigatório.">
+            @if (Curso != null && Curso.Any())
+            {
+                @foreach (var C in Curso)
+                {
+                    <MudSelectItem Value="C.Id_Curso">@C.nome</MudSelectItem>
+                }
+            }
+            else
+            {
+                <MudSelectItem Value="0">Nenhuma categoria encontrada</MudSelectItem>
+            }
+        </MudSelect>
+
+        <MudTextField Class="mt-4" T="string" Label="Status" Placeholder="Status"
+                      InputType="InputType.Text"
+                      @bind-Value="Status"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+
+
+        <div class="d-flex justify-end mt-6">
+            <MudButton Variant="Variant.Filled"
+                       StartIcon="@Icons.Material.Filled.Save"
+                       @onclick="Cadastrar"
+                       Color="Color.Success">
+                Cadastrar
+            </MudButton>
+        </div>
+
+    </MudForm>
+</MudPaper>
+
+
+@code {
+    private int Id_Aluno;
+    private int Id_Curso;
+    private string Status;
+    private DateTime Data_Matricula = DateTime.UtcNow;
+    private string MensagemAlerta = string.Empty;
+    private bool sucesso = false;
+    private ICollection<AlunoResponse>? Aluno;
+    private ICollection<CursoResponse>? Curso;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Aluno = await AlunoAPI.GetAlunosAsync();
+        Curso = await CursoAPI.GetCursoAsync();
+    }
+
+
+    public async Task Cadastrar()
+    {
+        if (CamposVazios())
+        {
+            MensagemAlerta = "Preencha os campos obrigatórios!";
+            return;
+        }
+
+        var Matricula = new MatriculaRequest(Id_Aluno, Id_Curso, Data_Matricula, Status);
+        sucesso = true;
+        await MatriculaAPI.AddMatriculaAsync(Matricula);
+        navigationManager.NavigateTo("/Matricula");
+
+    }
+
+
+    private bool CamposVazios()
+    {
+        return Id_Aluno == 0 || Id_Curso == 0 || string.IsNullOrEmpty(Status);
+    }
+
+
+}

@@ -1,93 +1,64 @@
-﻿<div class="top-row ps-3 navbar navbar-dark bg-primary">
+﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="">🎓 Sistema Acadêmico</a>
-        <button title="Menu de Navegação" class="navbar-toggler" @onclick="ToggleNavMenu">
+        <a class="navbar-brand" href="">Sistema Academico</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable bg-primary text-white">
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="flex-column">
-        <!-- Dashboard -->
         <div class="nav-item px-3">
-            <NavLink class="nav-link text-white" href="/dashboard">
-                <span class="bi bi-speedometer2 text-white"></span> Dashboard
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> DashBoard
             </NavLink>
         </div>
 
-        <!-- Acadêmico (Dropdown) -->
         <div class="nav-item px-3">
-            <a class="nav-link text-white" href="#" @onclick="ToggleAcademicoMenu">
-                <span class="bi bi-mortarboard-fill text-white"></span> Acadêmico ▾
-            </a>
-            <div class="@AcademicoMenuCssClass">
-                <NavLink class="nav-link ms-3 text-white" href="/disciplinas">📘 Disciplinas</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/notas">📝 Notas</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/frequencia">📊 Frequência</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/historico">📜 Histórico Escolar</NavLink>
-            </div>
+            <MudNavLink Href="/Matricula">Matricula</MudNavLink>
         </div>
 
-        <!-- Financeiro (Dropdown) -->
         <div class="nav-item px-3">
-            <a class="nav-link text-white" href="#" @onclick="ToggleFinanceiroMenu">
-                <span class="bi bi-cash-stack text-white"></span> Financeiro ▾
-            </a>
-            <div class="@FinanceiroMenuCssClass">
-                <NavLink class="nav-link ms-3 text-white" href="/faturas">💳 Faturas</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/pagamentos">💰 Pagamentos</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/bolsas">🎓 Bolsa/Auxílios</NavLink>
-            </div>
+            <MudNavLink Href="/Alunos">Grade Curricular</MudNavLink>
         </div>
 
-        <!-- Secretaria (Dropdown) -->
         <div class="nav-item px-3">
-            <a class="nav-link text-white" href="#" @onclick="ToggleSecretariaMenu">
-                <span class="bi bi-file-earmark-text text-white"></span> Secretaria ▾
-            </a>
-            <div class="@SecretariaMenuCssClass">
-                <NavLink class="nav-link ms-3 text-white" href="/documentos">📄 Documentos</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/requerimentos">✍️ Requerimentos</NavLink>
-            </div>
+            <MudNavLink Href="/Alunos">Quadro de Horários</MudNavLink>
         </div>
 
-        <!-- Biblioteca -->
         <div class="nav-item px-3">
-            <a class="nav-link text-white" href="#" @onclick="ToggleBibliotecaMenu">
-                <span class="bi bi-book text-white"></span> Biblioteca ▾
-            </a>
-            <div class="@BibliotecaMenuCssClass">
-                <NavLink class="nav-link ms-3 text-white" href="/acervo">📚 Acervo</NavLink>
-                <NavLink class="nav-link ms-3 text-white" href="/emprestimos">📖 Empréstimos</NavLink>
-            </div>
+            <MudNavLink Href="/Alunos">Financeiro</MudNavLink>
         </div>
 
-        <!-- Configurações -->
         <div class="nav-item px-3">
-            <NavLink class="nav-link text-white" href="/configuracoes">
-                <span class="bi bi-gear-fill text-white"></span> Configurações
-            </NavLink>
+            <MudNavGroup Title="Central do Aluno" Icon="@Icons.Material.Filled.School">
+                <MudNavLink Href="/Alunos" Icon="@Icons.Material.Filled.List">Exibir</MudNavLink>
+                <MudNavLink Href="/Alunos" Icon="@Icons.Material.Filled.ErrorOutline">Faltas</MudNavLink>
+                <MudNavLink Href="/Alunos" Icon="@Icons.Material.Filled.Note">Notas</MudNavLink>
+                
+            </MudNavGroup>
+        </div>
+
+
+        <div class="nav-item px-3">
+
+            <MudNavGroup Title="Cadastros" Icon="@Icons.Material.Filled.School">
+                <MudNavLink Href="/CadastrarAluno" Icon="@Icons.Material.Filled.PersonAdd">Cadastrar Aluno</MudNavLink>
+                <MudNavLink Href="/CadastrarMatricula" Icon="@Icons.Material.Filled.PersonAdd">Cadastrar Matricula</MudNavLink>
+
+            </MudNavGroup>
         </div>
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
-    private bool collapseAcademicoMenu = true;
-    private bool collapseFinanceiroMenu = true;
-    private bool collapseSecretariaMenu = true;
-    private bool collapseBibliotecaMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-    private string? AcademicoMenuCssClass => collapseAcademicoMenu ? "d-none" : "d-block";
-    private string? FinanceiroMenuCssClass => collapseFinanceiroMenu ? "d-none" : "d-block";
-    private string? SecretariaMenuCssClass => collapseSecretariaMenu ? "d-none" : "d-block";
-    private string? BibliotecaMenuCssClass => collapseBibliotecaMenu ? "d-none" : "d-block";
 
-    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
-    private void ToggleAcademicoMenu() => collapseAcademicoMenu = !collapseAcademicoMenu;
-    private void ToggleFinanceiroMenu() => collapseFinanceiroMenu = !collapseFinanceiroMenu;
-    private void ToggleSecretariaMenu() => collapseSecretariaMenu = !collapseSecretariaMenu;
-    private void ToggleBibliotecaMenu() => collapseBibliotecaMenu = !collapseBibliotecaMenu;
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
 }

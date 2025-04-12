@@ -1,0 +1,119 @@
+﻿@page "/Alunos"
+
+@inject AlunoAPI alunoAPI
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+
+
+
+<MudStack Class="mt-4 mb-4" Row="true" Justify="Justify.SpaceBetween">
+    <MudText Class="mb-4" Typo="Typo.h4">Alunos Cadastrados</MudText>
+    <MudPagination Count="@totalPaginas" SelectedChanged="PaginaMudou"></MudPagination>
+</MudStack>
+
+@if (!string.IsNullOrEmpty(MensagemAlerta))
+{
+    <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+}
+
+@if (AlunoPorPagina is not null)
+{
+    <MudTable Items="AlunoPorPagina" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Código</MudTh>
+            <MudTh>Nome</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Senha</MudTh>
+            <MudTh>Telefone</MudTh>
+            <MudTh>Endereço</MudTh>
+            <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Código">@context.Id_Aluno</MudTd>
+            <MudTd DataLabel="Nome">@context.nome</MudTd>
+            <MudTd DataLabel="Email">@context.email</MudTd>
+            <MudTd DataLabel="Senha">@context.senha</MudTd>
+            <MudTd DataLabel="Telefone">@context.telefone</MudTd>
+            <MudTd DataLabel="Endereço">@context.endereco</MudTd>
+            <MudTd>
+                <MudTooltip Text="Adicionar">  <MudFab Color="Color.Success" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" @onclick="AdicionarAluno" /> </MudTooltip>
+                <MudTooltip Text="Editar">  <MudFab Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small" @onclick="() => UpdateAluno(context.Id_Aluno)" /></MudTooltip>
+                <MudTooltip Text="Deletar">  <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small" @onclick="() => onDeleteClick(context.Id_Aluno)" /></MudTooltip>
+
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+@code {
+    private ICollection<AlunoResponse>? Aluno;
+    private int tamanho = 8;
+    private int TotalItens;
+    private int totalPaginas;
+    private ICollection<AlunoResponse>? AlunoPorPagina;
+    private int paginaAtual = 1;
+    private string MensagemAlerta = string.Empty;
+    private bool sucesso = false;
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Aluno = await alunoAPI.GetAlunosAsync();
+
+        if (Aluno != null)
+        {
+            Aluno = Aluno.OrderByDescending(u => u.Id_Aluno).ToList();
+            TotalItens = Aluno.Count();
+            totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+            PaginaMudou(1);
+        }
+    }
+
+    public void AdicionarAluno()
+    {
+        navigationManager.NavigateTo("/CadastrarAluno");
+    }
+
+    public void UpdateAluno(int id)
+    {
+        navigationManager.NavigateTo($"/EditarAluno/{id}");
+    }
+
+
+    public async Task onDeleteClick(int id)
+    {
+        var result = await alunoAPI.DeleteAlunoAsync(id);
+
+        if (result)
+        {
+
+            var EnderecoRemove = Aluno!.FirstOrDefault(e => e.Id_Aluno == id);
+
+            if (EnderecoRemove != null)
+            {
+                Aluno.Remove(EnderecoRemove);
+                TotalItens = Aluno.Count();
+                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                PaginaMudou(paginaAtual);
+
+            }
+
+        }
+        StateHasChanged();
+    }
+
+
+    private void PaginaMudou(int pageNumber)
+    {
+
+        paginaAtual = pageNumber;
+        var indice = (paginaAtual - 1) * tamanho;
+        AlunoPorPagina = Aluno!
+            .Skip(indice)
+            .Take(tamanho)
+            .ToList();
+    }
+
+}

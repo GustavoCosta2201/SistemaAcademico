@@ -72,6 +72,7 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcade
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.csproj.CoreCompileInputs.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.MvcApplicationPartsAssemblyInfo.cs
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.MvcApplicationPartsAssemblyInfo.cache
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.sourcelink.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.development.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets\msbuild.SistemaAcademico.API.Microsoft.AspNetCore.StaticWebAssets.props

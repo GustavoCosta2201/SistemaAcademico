@@ -17,9 +17,9 @@ namespace SistemaAcademico.Models
         public virtual Aluno Aluno { get; set; } 
 
         [ForeignKey("Id_Curso")]
-        public virtual Curso Curso { get; set; } 
+        public virtual Curso Curso { get; set; }
 
-        public DateTime Data_Matricula { get; set; }
+        public DateTime Data_Matricula { get; set; } = DateTime.Now;
         public string Status_Matricula { get; set; }
 
         public Matricula()

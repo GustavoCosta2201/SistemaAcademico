@@ -1,4 +1,5 @@
-﻿using SistemaAcademico.Request;
+﻿using SistemaAcademico.Response;
+using SistemaAcademico.Request;
 using System.Net.Http.Json;
 
 
@@ -13,7 +14,7 @@ namespace SistemaAcademico.Web2.Services
             httpClient = factory.CreateClient("API");
         }
 
-        public async Task<ICollection<MatriculaResponse>?> GetEnderecoAsync()
+        public async Task<ICollection<MatriculaResponse>?> GetMatriculaAsync()
         {
             return await httpClient.GetFromJsonAsync<ICollection<MatriculaResponse>>("Matricula");
         }

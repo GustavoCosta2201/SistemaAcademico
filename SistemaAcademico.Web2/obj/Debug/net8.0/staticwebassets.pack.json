@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\SistemaAcademico.Web2.styles.css"
     },
     {
+      "Id": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\wwwroot\\LogoAcademico.png",
+      "PackagePath": "staticwebassets\\LogoAcademico.png"
+    },
+    {
       "Id": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\wwwroot\\appsettings.Development.json",
       "PackagePath": "staticwebassets\\appsettings.Development.json"
     },

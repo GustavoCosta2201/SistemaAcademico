@@ -4,12 +4,12 @@
     "Projects": [
       {
         "Name": "SistemaAcademico\\SistemaAcademico.API.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Action": "Start"
       },
       {
         "Name": "SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": ""
       }
     ]
   }
