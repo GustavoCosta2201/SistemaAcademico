@@ -47,14 +47,18 @@
 
             <MudTd DataLabel="Curso">
                 @if (Curso != null)
-                {
-                    var Cursos = Curso.FirstOrDefault(e => e.Id_Curso == context.IdCurso);
+                {   
+                    var Cursos = Curso.FirstOrDefault(e => e.Id_Curso == context.Id_Curso);
 
                     if (Cursos != null)
                     {
                         @Cursos.nome
 
                     }
+                }
+                else
+                {
+                    Console.WriteLine("erro ao trazer o curso");
                 }
 
             </MudTd>
@@ -90,6 +94,7 @@
         Aluno = await alunoAPI.GetAlunosAsync();
         Matriculas = await MatriculaAPI.GetMatriculaAsync();
         Curso = await CursoAPI.GetCursoAsync();
+        Console.WriteLine($"Cursos carregados: {Curso?.Count()}");
 
 
 
