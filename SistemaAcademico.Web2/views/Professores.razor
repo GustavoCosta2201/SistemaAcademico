@@ -1,0 +1,117 @@
+﻿@page "/Professores"
+
+@inject ProfessorAPI ProfessorAPI
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+
+
+
+<MudStack Class="mt-4 mb-4" Row="true" Justify="Justify.SpaceBetween">
+    <MudText Class="mb-4" Typo="Typo.h4">Professores Cadastrados</MudText>
+    <MudPagination Count="@totalPaginas" SelectedChanged="PaginaMudou"></MudPagination>
+</MudStack>
+
+@if (!string.IsNullOrEmpty(MensagemAlerta))
+{
+    <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+}
+
+@if (ProfPorPagina is not null)
+{
+    <MudTable Items="ProfPorPagina" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Código</MudTh>
+            <MudTh>Nome</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Telefone</MudTh>
+            <MudTh>Departamento</MudTh>
+            <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Código">@context.Id_Professor</MudTd>
+            <MudTd DataLabel="Nome">@context.nome</MudTd>
+            <MudTd DataLabel="Email">@context.email</MudTd>
+            <MudTd DataLabel="Telefone">@context.telefone</MudTd>
+            <MudTd DataLabel="Departamento">@context.departamento</MudTd>
+            <MudTd>
+                <MudTooltip Text="Adicionar">  <MudFab Color="Color.Success" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" @onclick="AdicionarAluno" /> </MudTooltip>
+                <MudTooltip Text="Editar">  <MudFab Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small" @onclick="() => UpdateAluno(context.Id_Professor)" /></MudTooltip>
+                <MudTooltip Text="Deletar">  <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small" @onclick="() => onDeleteClick(context.Id_Professor)" /></MudTooltip>
+
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+@code {
+    private ICollection<ProfessorResponse>? prof;
+    private int tamanho = 8;
+    private int TotalItens;
+    private int totalPaginas;
+    private ICollection<ProfessorResponse>? ProfPorPagina;
+    private int paginaAtual = 1;
+    private string MensagemAlerta = string.Empty;
+    private bool sucesso = false;
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        prof = await ProfessorAPI.GetProfessorAsync();
+
+        if (prof != null)
+        {
+            prof = prof.OrderByDescending(u => u.Id_Professor).ToList();
+            TotalItens = prof.Count();
+            totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+            PaginaMudou(1);
+        }
+    }
+
+    public void AdicionarAluno()
+    {
+        navigationManager.NavigateTo("/CadastrarProfessor");
+    }
+
+    public void UpdateAluno(int id)
+    {
+        navigationManager.NavigateTo($"/EditarProfessor/{id}");
+    }
+
+
+    public async Task onDeleteClick(int id)
+    {
+        var result = await ProfessorAPI.DeleteProfessorAsync(id);
+
+        if (result)
+        {
+
+            var ProfRemove = prof!.FirstOrDefault(e => e.Id_Professor == id);
+
+            if (ProfRemove != null)
+            {
+                prof.Remove(ProfRemove);
+                TotalItens = prof.Count();
+                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                PaginaMudou(paginaAtual);
+
+            }
+
+        }
+        StateHasChanged();
+    }
+
+
+    private void PaginaMudou(int pageNumber)
+    {
+
+        paginaAtual = pageNumber;
+        var indice = (paginaAtual - 1) * tamanho;
+        ProfPorPagina = prof!
+            .Skip(indice)
+            .Take(tamanho)
+            .ToList();
+    }
+
+}

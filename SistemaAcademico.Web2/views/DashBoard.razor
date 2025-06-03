@@ -1,0 +1,51 @@
+﻿@page "/dashboard"
+@inject MatriculaAPI matriculaAPI
+@inject CursoAPI cursoAPI
+
+<h3>DashBoard</h3>
+
+@if (data == null || labels == null)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else
+{
+    <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@data" InputLabels="@labels">
+        <CustomGraphics>
+            <text class="donut-inner-text" x="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica">Total</text>
+            <text class="donut-inner-text" x="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica">@data.Sum()</text>
+        </CustomGraphics>
+    </MudChart>
+}
+
+@code {
+    private double[]? data;
+    private string[]? labels;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var matriculas = await matriculaAPI.GetMatriculaAsync();
+        var cursos = await cursoAPI.GetCursoAsync();
+
+        if (matriculas is null || !matriculas.Any() || cursos is null || !cursos.Any())
+            return;
+
+        // Agrupar por ID do curso
+        var agrupado = matriculas
+            .GroupBy(m => m.Id_Curso)
+            .Select(g => new
+            {
+                IdCurso = g.Key,
+                Quantidade = g.Count()
+            })
+            .ToList();
+
+        data = agrupado.Select(a => (double)a.Quantidade).ToArray();
+
+        // Pega o nome do curso com base no ID
+        labels = agrupado
+            .Select(a =>
+                cursos.FirstOrDefault(c => c.Id_Curso == a.IdCurso)?.nome ?? "Desconhecido"
+            ).ToArray();
+    }
+}

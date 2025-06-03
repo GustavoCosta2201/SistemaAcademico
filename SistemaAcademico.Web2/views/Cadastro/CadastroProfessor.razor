@@ -1,0 +1,99 @@
+﻿@page "/CadastrarProfessor"
+@using SistemaAcademico.Request
+@using SistemaAcademico.Web2.Services
+@inject NavigationManager navigationManager
+@inject ProfessorAPI ProfessorAPI
+
+<MudPaper Class="px-8 pt-6 pb-8 mx-12 my-8" Elevation="3" Square="true">
+
+    <MudText Class="mt-8" Typo="Typo.h4">Cadastro de Professores</MudText>
+
+    @if (sucesso)
+    {
+        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">Professor cadastrado com sucesso!</MudAlert>
+    }
+
+    @if (!string.IsNullOrEmpty(MensagemAlerta) && CamposVazios())
+    {
+        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+    }
+
+    <MudForm Class="mt-6">
+
+        <MudTextField Class="mt-4" T="string" Label="Nome" Placeholder="Nome:"
+                      InputType="InputType.Text"
+                      @bind-Value="Nome"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Category" />
+
+        <MudTextField Class="mt-4" T="string" Label="Email" Placeholder="Email"
+                      InputType="InputType.Text"
+                      @bind-Value="Email"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+
+        <MudTextField Mask="@mask1" Class="mt-4" T="string" Label="Telefone" Placeholder="Telefone"
+                      InputType="InputType.Text"
+                      @bind-Value="Telefone"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <MudTextField Class="mt-4" T="string" Label="Departamento" Placeholder="Departamento"
+                      InputType="InputType.Text"
+                      @bind-Value="Departamento"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <div class="d-flex justify-end mt-6">
+            <MudButton Variant="Variant.Filled"
+                       StartIcon="@Icons.Material.Filled.Save"
+                       @onclick="Cadastrar"
+                       Color="Color.Success">
+                Cadastrar
+            </MudButton>
+        </div>
+
+    </MudForm>
+</MudPaper>
+
+
+@code {
+    private string Nome;
+    private string Email;
+    private string Telefone;
+    private string Departamento;
+    private string MensagemAlerta = string.Empty;
+    private bool sucesso = false;
+    public async Task Cadastrar()
+    {
+        if (CamposVazios())
+        {
+            MensagemAlerta = "Preencha os campos obrigatórios!";
+            return;
+        }
+
+        var prof = new ProfessorRequest(Nome, Email, Telefone, Departamento);
+        sucesso = true;
+        await ProfessorAPI.AddProfessorAsync(prof);
+        navigationManager.NavigateTo("/Professor");
+
+    }
+
+    public PatternMask mask1 = new PatternMask("(##) #####-####")
+        {
+            MaskChars = new[] { new MaskChar('#', @"[0-9]") }
+        };
+
+    private bool CamposVazios()
+    {
+        return string.IsNullOrEmpty(Nome) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Telefone)
+            || string.IsNullOrEmpty(Departamento);
+    }
+
+
+}
