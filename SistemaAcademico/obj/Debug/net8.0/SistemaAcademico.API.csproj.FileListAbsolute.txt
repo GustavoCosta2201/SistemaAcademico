@@ -75,11 +75,6 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcade
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.sourcelink.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.development.json
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets\msbuild.SistemaAcademico.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets\msbuild.build.SistemaAcademico.API.props
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SistemaAcademico.API.props
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SistemaAcademico.API.props
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.pack.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\scopedcss\bundle\SistemaAcademico.API.styles.css
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaA.166EC64D.Up2Date
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.dll
@@ -87,3 +82,7 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\refint\Siste
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.pdb
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\SistemaAcademico.API.genruntimeconfig.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\ref\SistemaAcademico.API.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\SistemaAcademico.API.staticwebassets.endpoints.json
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

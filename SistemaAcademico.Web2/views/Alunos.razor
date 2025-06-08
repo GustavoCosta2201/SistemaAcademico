@@ -1,5 +1,6 @@
 ﻿@page "/Alunos"
 
+
 @inject AlunoAPI alunoAPI
 @inject NavigationManager navigationManager
 @inject IDialogService DialogService
@@ -82,26 +83,37 @@
     }
 
 
-    public async Task onDeleteClick(int id)
+    private async Task onDeleteClick(int id)
     {
-        var result = await alunoAPI.DeleteAlunoAsync(id);
-
-        if (result)
+        var parameters = new DialogParameters
         {
+            { nameof(Popup.ContentText), "Você realmente quer excluir esse aluno?" },
+            { nameof(Popup.ButtonText), "Deletar" },
+            { nameof(Popup.Color), Color.Error }
+        };
 
-            var EnderecoRemove = Aluno!.FirstOrDefault(e => e.Id_Aluno == id);
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 
-            if (EnderecoRemove != null)
+        var dialog = DialogService.Show<Popup>("Confirmar Deleção", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            var success = await alunoAPI.DeleteAlunoAsync(id);
+
+            if (success)
             {
-                Aluno.Remove(EnderecoRemove);
-                TotalItens = Aluno.Count();
-                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
-                PaginaMudou(paginaAtual);
-
+                var Alunoremover = Aluno!.FirstOrDefault(u => u.Id_Aluno == id);
+                if (Alunoremover != null)
+                {
+                    Aluno!.Remove(Alunoremover);
+                    TotalItens = Aluno.Count();
+                    totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                    PaginaMudou(paginaAtual);
+                    StateHasChanged();
+                }
             }
-
         }
-        StateHasChanged();
     }
 
 

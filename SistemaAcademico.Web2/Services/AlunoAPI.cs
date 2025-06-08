@@ -29,10 +29,11 @@ namespace SistemaAcademico.Web2.Services
             await httpclient.PostAsJsonAsync("Aluno", alunoRequest);
         }
 
-        public async Task UpdateAlunoAsync(AlunoEdit edit)
+        public async Task<bool> UpdateAlunoAsync(AlunoEdit edit)
         {
-            var url = $"/Aluno/{edit.id}";
+            var url = $"/Aluno/{edit.Id_Aluno}";
             await httpclient.PutAsJsonAsync(url, edit);
+            return true;
         }
 
          public async Task<bool> DeleteAlunoAsync(int id)

@@ -1,0 +1,134 @@
+﻿@page "/EditarAluno/{id:int}"
+@inject NavigationManager navigationManager
+@inject AlunoAPI AlunoAPI
+
+<MudPaper Class="px-8 pt-6 pb-8 mx-12 my-8" Elevation="3" Square="true">
+    <MudText Class="mt-8" Typo="Typo.h4" Color="Color.Primary">Editar Aluno</MudText>
+
+    @if (!string.IsNullOrEmpty(MensagemAlerta) && CamposVazios())
+    {
+        <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta!</MudAlert>
+    }
+
+    <MudForm Class="mt-6">
+
+        <MudTextField Class="mt-4" T="string" Placeholder="Nome da Categoria"
+                      InputType="InputType.Text"
+                      @bind-Value="Aluno.nome"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Category" />
+
+        <MudTextField Class="mt-4" T="string" Label="Email" Placeholder="Email"
+                      InputType="InputType.Text"
+                      @bind-Value="Aluno.email"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <MudTextField Class="mt-4" T="string" Label="Senha" Placeholder="Senha"
+                      InputType="InputType.Password"
+                      @bind-Value="Aluno.senha"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <MudTextField Mask="@mask1" Class="mt-4" T="string" Label="Telefone" Placeholder="Telefone"
+                      InputType="InputType.Text"
+                      @bind-Value="Aluno.telefone"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <MudTextField Class="mt-4" T="string" Label="Endereço" Placeholder="Endereço"
+                      InputType="InputType.Text"
+                      @bind-Value="Aluno.endereco"
+                      Required="true"
+                      RequiredError="Campo obrigatório."
+                      Icon="Icons.Outlined.Description" />
+
+        <div class="d-flex justify-end mt-6">
+            <MudButton Variant="Variant.Filled"
+                       StartIcon="@Icons.Material.Filled.Save"
+                       @onclick="Editar"
+                       Color="Color.Warning">
+                Editar
+            </MudButton>
+        </div>
+
+    </MudForm>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    private AlunoEdit Aluno= new(0, "", "","",DateTime.Now,"","");
+    private string MensagemAlerta = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var AlunoResponse = await AlunoAPI.GetAlunoPorId(id);
+            if (AlunoResponse != null)
+            {
+                Aluno = new AlunoEdit(AlunoResponse.Id_Aluno, AlunoResponse.nome, AlunoResponse.email, AlunoResponse.senha, DateTime.Now, AlunoResponse.telefone, AlunoResponse.endereco);
+            }
+            else
+            {
+                MensagemAlerta = "Categoria não encontrada!";
+            }
+        }
+        catch (Exception ex)
+        {
+            MensagemAlerta = $"Erro ao carregar a categoria: {ex.Message}";
+        }
+    }
+
+
+    public PatternMask mask1 = new PatternMask("(##) #####-####")
+    {
+        MaskChars = new[] { new MaskChar('#', @"[0-9]") }
+    };
+
+    private async Task Editar()
+    {
+        if (CamposVazios())
+        {
+            MensagemAlerta = "Preencha os campos obrigatórios!";
+            return;
+        }
+
+        try
+        {
+            Console.WriteLine("Iniciando atualização...");
+            var success = await AlunoAPI.UpdateAlunoAsync(Aluno);
+            if (success)
+            {
+                Console.WriteLine("Atualização bem-sucedida, navegando para /Alunos");
+                navigationManager.NavigateTo("/Alunos/");
+            }
+            else
+            {
+                MensagemAlerta = "Erro ao atualizar o aluno!";
+            }
+        }
+        catch (Exception ex)
+        {
+            MensagemAlerta = $"Erro ao atualizar o aluno: {ex.Message}";
+        }
+    }
+
+    private bool CamposVazios()
+    {
+        return string.IsNullOrEmpty(Aluno.nome) ||
+        string.IsNullOrEmpty(Aluno.senha) ||
+        string.IsNullOrEmpty(Aluno.telefone) ||
+        string.IsNullOrEmpty(Aluno.email);
+    }
+}
+
+
+
+
