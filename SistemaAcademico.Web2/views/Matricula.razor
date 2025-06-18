@@ -120,7 +120,7 @@
 
     public async Task onDeleteClick(int id)
     {
-        var result = await alunoAPI.DeleteAlunoAsync(id);
+        var result = await MatriculaAPI.DeleteMatriculaAsync(id);
 
         if (result)
         {
