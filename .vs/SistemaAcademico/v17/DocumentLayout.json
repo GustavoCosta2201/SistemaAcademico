@@ -39,15 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SistemaAcademico.API",
+              "Title": "SistemaAcademico.API.csproj",
               "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\SistemaAcademico.API.csproj",
               "RelativeDocumentMoniker": "SistemaAcademico\\SistemaAcademico.API.csproj",
               "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\SistemaAcademico.API.csproj",
               "RelativeToolTip": "SistemaAcademico\\SistemaAcademico.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-18T21:49:20.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T21:49:20.747Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "SistemaAcademico.Web2\\Request\\AlunoEdit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T00:04:23.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T00:04:23.511Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "SistemaAcademico.Web2\\Request\\MatriculaEdit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T23:59:45.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T23:59:45.793Z"
             },
             {
               "$type": "Document",
@@ -83,7 +80,7 @@
               "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Edit\\MatriculaEdit.razor",
               "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Edit\\MatriculaEdit.razor",
               "RelativeToolTip": "SistemaAcademico.Web2\\views\\Edit\\MatriculaEdit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-09T23:55:02.944Z",
               "EditorCaption": ""
@@ -98,8 +95,7 @@
               "RelativeToolTip": "SistemaAcademico.Web2\\views\\Edit\\AlunosEdit.razor",
               "ViewState": "AgIAAE8AAAAAAAAAAAAowIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T23:53:52.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T23:53:52.908Z"
             }
           ]
         },
