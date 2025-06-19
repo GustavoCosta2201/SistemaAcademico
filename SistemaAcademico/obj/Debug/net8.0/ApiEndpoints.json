@@ -372,6 +372,46 @@
     ]
   },
   {
+    "ContainingType": "SistemaAcademico.EndPoints.HorarioExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsHorario\u003Eb__0_0",
+    "RelativePath": "Horario/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCurso",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ano",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "semestre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Horario"
+    ]
+  },
+  {
     "ContainingType": "SistemaAcademico.EndPoints.MatriculaExtension\u002B\u003C\u003Ec",
     "Method": "\u003CAddEndPointsMatricula\u003Eb__0_0",
     "RelativePath": "Matricula/",

@@ -64,8 +64,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = dmlld3NcTWF0cmljdWxhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Notas.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcTm90YXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Professores.razor]
 build_metadata.AdditionalFiles.TargetPath = dmlld3NcUHJvZmVzc29yZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/QuadroHorario.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcUXVhZHJvSG9yYXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/_Imports.razor]

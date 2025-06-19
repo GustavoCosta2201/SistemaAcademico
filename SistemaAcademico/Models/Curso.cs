@@ -10,6 +10,8 @@ namespace SistemaAcademico.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public int Duracao { get; set; }
+        public virtual ICollection<CursoDisciplina> CursosDisciplinas { get; set; } = new List<CursoDisciplina>();
+
 
 
 

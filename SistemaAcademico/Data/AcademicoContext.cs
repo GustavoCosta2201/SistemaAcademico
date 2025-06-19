@@ -13,6 +13,8 @@ namespace SistemaAcademico.Data
         public DbSet<Nota> Nota { get; set; }
         public DbSet<Professor> Professor { get; set; }
         public DbSet<Turma> Turma{ get; set; }
+        public DbSet<CursoDisciplina> CursoDisciplina { get; set; }
+      
 
 
         
@@ -22,7 +24,7 @@ namespace SistemaAcademico.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionString).UseLazyLoadingProxies(true);
+            optionsBuilder.UseSqlServer(ConnectionString).UseLazyLoadingProxies(false);
         }
     }
 }

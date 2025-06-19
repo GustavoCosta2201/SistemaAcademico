@@ -30,6 +30,7 @@ builder.Services.AddTransient<DAL<Nota>>();
 builder.Services.AddTransient<DAL<Professor>>();
 builder.Services.AddTransient<DAL<Turma>>();
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -46,6 +47,7 @@ app.AddEndPointsMatricula();
 app.AddEndPointsNota();
 app.AddEndPointsProfessor();
 app.AddEndPointsTurma();
+app.AddEndPointsHorario();
 
 
 app.UseHttpsRedirection();

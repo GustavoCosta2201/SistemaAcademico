@@ -26,7 +26,7 @@ namespace SistemaAcademico.EndPoints
 
             Groupbuilder.MapPost("", ([FromServices] DAL<Disciplina> Disc, DisciplinaRequest DiscRequest) => {
 
-                var Discnew = new Disciplina(DiscRequest.nome, DiscRequest.descricao, DiscRequest.id_curso);
+                var Discnew = new Disciplina(DiscRequest.nome, DiscRequest.descricao);
                 Disc.AddItem(Discnew);  
                 return Results.Ok(Discnew);
                
@@ -40,7 +40,6 @@ namespace SistemaAcademico.EndPoints
                 {
                     recover.Nome = edit.nome;
                     recover.Descricao = edit.descricao;
-                    recover.Id_Curso = edit.id_curso;
 
                     Disc.UpdateItem(recover);
                     return Results.Ok(recover);

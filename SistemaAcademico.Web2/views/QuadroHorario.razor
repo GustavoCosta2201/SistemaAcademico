@@ -1,0 +1,98 @@
+﻿@page "/Horario"
+@inject CursoAPI CursoAPI
+@inject HorarioAPI HorarioAPI
+
+<MudPaper Class="p-4" MaxWidth="10000px" Style="margin:auto; min-height:800px;">
+    <MudGrid>
+        <MudItem xs="12" sm="6" md="3">
+            <MudSelect T="int?" Label="Curso" @bind-Value="idCurso" Dense Clearable>
+                <MudSelectItem T="int?" Value="@(null)">Todos os Cursos</MudSelectItem>
+                @foreach (var curso in cursos)
+                {
+                    <MudSelectItem T="int?" Value="@curso.Id_Curso">@curso.nome</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="12" sm="6" md="3">
+            <MudSelect T="string" Label="Turno" @bind-Value="turno" Dense Clearable>
+                <MudSelectItem T="string" Value="@null">Todos</MudSelectItem>
+                @foreach (var t in turnos)
+                {
+                    <MudSelectItem T="string" Value="@t">@t</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="12" sm="6" md="2" Class="d-flex align-items-end">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="BuscarHorarios" FullWidth>
+                Buscar
+            </MudButton>
+        </MudItem>
+    </MudGrid>
+
+    <MudDivider Class="my-4" />
+
+    @if (isLoading)
+    {
+        <MudProgressCircular Indeterminate Color="Color.Primary" Size="Size.Large" />
+    }
+    else if (horarios == null || !horarios.Any())
+    {
+        <MudText>Nenhum horário encontrado.</MudText>
+    }
+    else
+    {
+        @foreach (var grupo in horarios.GroupBy(h => new { h.IdCurso, h.NomeCurso }))
+        {
+            <MudExpansionPanels Elevation="1" Class="mb-4">
+                <MudExpansionPanel Text="@grupo.Key.NomeCurso">
+                    <MudTable Items="@grupo" Dense Hover>
+                        <HeaderContent>
+                            <MudTh>Disciplina</MudTh>
+                            <MudTh>Professor</MudTh>
+                            <MudTh>Ano</MudTh>
+                            <MudTh>Semestre</MudTh>
+                            <MudTh>Turno</MudTh>
+                        </HeaderContent>
+                        <RowTemplate>
+                            <MudTd>@context.NomeDisciplina</MudTd>
+                            <MudTd>@context.NomeProfessor</MudTd>
+                            <MudTd>@context.Ano</MudTd>
+                            <MudTd>@context.Semestre</MudTd>
+                            <MudTd>@context.Turno</MudTd>
+                        </RowTemplate>
+                    </MudTable>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        }
+    }
+</MudPaper>
+
+@code {
+    private ICollection<CursoResponse> cursos = new List<CursoResponse>();
+    private ICollection<HorarioResponse>? horarios;
+    private int? idCurso;
+    private string? turno = "";
+
+    private bool isLoading = false;
+
+    private List<string> turnos = new List<string> { "Manhã", "Tarde", "Noite" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        cursos = (await CursoAPI.GetCursoAsync()) ?? new List<CursoResponse>();
+        await BuscarHorarios();
+    }
+
+    private async Task BuscarHorarios()
+    {
+        isLoading = true;
+        StateHasChanged();
+
+        horarios = await HorarioAPI.GetHorariosAsync(idCurso, null, null, string.IsNullOrEmpty(turno) ? null : turno);
+
+        isLoading = false;
+        StateHasChanged();
+    }
+}

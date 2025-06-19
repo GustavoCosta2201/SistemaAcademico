@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaAcademico.Models
 {
@@ -11,21 +10,16 @@ namespace SistemaAcademico.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
 
-        public int Id_Curso { get; set; } 
-
-        [ForeignKey("Id_Curso")]
-        public virtual Curso Curso { get; set; }
+        public virtual ICollection<CursoDisciplina> CursosDisciplinas { get; set; } = new List<CursoDisciplina>();
 
         public Disciplina()
         {
-            
         }
 
-        public Disciplina(string nome, string descricao, int id_curso)
+        public Disciplina(string nome, string descricao)
         {
             Nome = nome;
             Descricao = descricao;
-            Id_Curso = id_curso;
         }
     }
 }

@@ -1,0 +1,52 @@
+﻿@page "/Notas"
+@inject SistemaAcademico.Web2.Services.NotaAPI NotaAPI
+@inject SistemaAcademico.Web2.Services.AlunoAPI AlunoAPI
+
+<MudPaper Class="p-4" Style="width: 95vw; max-width: none; margin: auto;">
+    <MudText Typo="Typo.h5" Class="mb-4">Notas dos Alunos</MudText>
+
+    @if (notas == null || alunos == null)
+    {
+        <MudProgressCircular Indeterminate Color="Color.Primary" Size="Size.Large" />
+    }
+    else if (!notas.Any())
+    {
+        <MudText>Nenhuma nota encontrada.</MudText>
+    }
+    else
+    {
+        <MudTable Items="notas" Dense Hover>
+            <HeaderContent>
+                <MudTh>Id Nota</MudTh>
+                <MudTh>Aluno</MudTh>
+                <MudTh>Id Turma</MudTh>
+                <MudTh>Nota</MudTh>
+                <MudTh>Data Avaliação</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.Id_Nota</MudTd>
+                <MudTd>@GetNomeAluno(context.id_aluno)</MudTd>
+                <MudTd>@context.id_turma</MudTd>
+                <MudTd>@context.nota_final</MudTd>
+                <MudTd>@context.Data_avaliacao.ToShortDateString()</MudTd>
+            </RowTemplate>
+        </MudTable>
+    }
+</MudPaper>
+
+@code {
+    private ICollection<NotaResponse>? notas;
+    private ICollection<AlunoResponse>? alunos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        notas = await NotaAPI.GetNotaAsync();
+        alunos = await AlunoAPI.GetAlunosAsync();
+    }
+
+    private string GetNomeAluno(int idAluno)
+    {
+        var aluno = alunos?.FirstOrDefault(a => a.Id_Aluno == idAluno);
+        return aluno?.nome ?? "Aluno não encontrado";
+    }
+}

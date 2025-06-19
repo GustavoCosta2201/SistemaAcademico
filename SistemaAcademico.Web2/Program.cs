@@ -14,6 +14,9 @@ builder.Services.AddScoped<AlunoAPI>();
 builder.Services.AddScoped<MatriculaAPI>();
 builder.Services.AddScoped<CursoAPI>();
 builder.Services.AddScoped<ProfessorAPI>();
+builder.Services.AddScoped<HorarioAPI>();
+builder.Services.AddScoped<NotaAPI>();
+
 
 builder.Services.AddMudServices();
 
