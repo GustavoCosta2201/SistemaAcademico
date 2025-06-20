@@ -1,0 +1,122 @@
+﻿@* @page "/relatorio-rendimento"
+@inject NotaAPI NotaAPI
+@inject DisciplinaAPI DisciplinaAPI
+@inject TurmaAPI TurmaAPI
+
+<MudPaper Class="p-4">
+    <MudText Typo="Typo.h5" Class="mb-4">Relatório de Rendimento por Disciplina</MudText>
+
+    <MudGrid>
+        <MudItem xs="12" sm="4">
+            <MudSelect T="int" Label="Filtrar por Turma" @bind-Value="turmaSelecionada">
+                <MudSelectItem Value="0">Todas</MudSelectItem>
+                @foreach (var turma in turmas)
+                {
+                    <MudSelectItem Value="@turma.Id_Turma">@turma.Id_Turma</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Filtrar">Aplicar Filtro</MudButton>
+        </MudItem>
+        <MudItem xs="12" sm="4" Class="d-flex justify-end">
+            <MudButton Color="Color.Info" OnClick="ExportarPDF">Exportar PDF</MudButton>
+            <MudButton Class="ml-2" Color="Color.Success" OnClick="ExportarExcel">Exportar Excel</MudButton>
+        </MudItem>
+    </MudGrid>
+
+    <MudDivider Class="my-4" />
+
+    <MudTable Items="relatorio" Hover="true">
+        <HeaderContent>
+            <MudTh>Disciplina</MudTh>
+            <MudTh>Média da Turma</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.NomeDisciplina</MudTd>
+            <MudTd>@context.Media.ToString("F2")</MudTd>
+        </RowTemplate>
+    </MudTable>
+
+    <MudDivider Class="my-4" />
+
+    <LineChart TItem="double" @ref="chart" Style="height:350px;" />
+
+</MudPaper>
+
+@code {
+    private List<DisciplinaResponse> disciplinas = new();
+    private List<NotaResponse> notas = new();
+    private List<TurmaResponse> turmas = new();
+
+    private List<RelatorioRendimentoDto> relatorio = new();
+    private int turmaSelecionada = 0;
+    private LineChart<double>? chart;
+
+    protected override async Task OnInitializedAsync()
+    {
+        turmas = (await TurmaAPI.GetTurmaAsync())?.ToList() ?? new();
+        await Filtrar();
+    }
+
+    private async Task Filtrar()
+    {
+        notas = (await NotaAPI.GetNotaAsync())?.ToList() ?? new();
+        disciplinas = (await DisciplinaAPI.GetDisciplinasAsync())?.ToList() ?? new();
+
+        var filtradas = turmaSelecionada == 0
+            ? notas
+            : notas.Where(n => n.id_turma == turmaSelecionada).ToList();
+
+        relatorio = disciplinas.Select(d => new RelatorioRendimentoDto
+        {
+            NomeDisciplina = d.nome,
+            Media = filtradas
+                .Where(n => n.Id_Disciplina == d.Id_Disciplina)
+                .Select(n => (double?)n.nota_final)
+                .DefaultIfEmpty(0)
+                .Average() ?? 0
+        }).ToList();
+
+        await AtualizarGrafico();
+    }
+
+    private async Task AtualizarGrafico()
+    {
+        if (chart is not null)
+        {
+            await chart.Clear();
+
+            var labels = relatorio.Select(x => x.NomeDisciplina).ToList();
+            var dados = relatorio.Select(x => x.Media).ToList();
+
+            await chart.AddLabelsDatasetsAndUpdate(labels, new LineChartDataset<double>
+            {
+                Label = "Média das Notas",
+                Data = dados,
+                Fill = true,
+                BorderColor = "rgba(76, 175, 80, 1)",
+                BackgroundColor = "rgba(76, 175, 80, 0.3)",
+                //Tension = 0.4
+            });
+        }
+    }
+
+    private async Task ExportarPDF()
+    {
+        // Exportação com JS interop ou biblioteca externa como BlazorDownloadFile
+        await Task.CompletedTask;
+    }
+
+    private async Task ExportarExcel()
+    {
+        // Similar à exportação em PDF, usando ClosedXML ou EPPlus no backend
+        await Task.CompletedTask;
+    }
+
+    public class RelatorioRendimentoDto
+    {
+        public string NomeDisciplina { get; set; } = "";
+        public double Media { get; set; }
+    }
+} *@
