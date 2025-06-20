@@ -83,8 +83,8 @@ dotnet run --project SistemaAcademico.Web
 ## 🧑‍💻 Autor
 
 Desenvolvido por **Gustavo Costa Vaz Garcia**  
-📧 [gustavo.cvg@gmail.com](mailto:gustavo.cvg@gmail.com)  
-🔗 [LinkedIn](https://linkedin.com/in/gustavo-costa-vaz-garcia)  
+📧 [gustavo.cvg@gmail.com](mailto:gustavocostagarcia13@gmail.com)  
+🔗 [LinkedIn](www.linkedin.com/in/gustavo-costa-vaz-garcia-4807b9229)  
 🐙 [GitHub](https://github.com/GustavoCosta2201)
 
 ---
