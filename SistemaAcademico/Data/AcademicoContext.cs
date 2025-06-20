@@ -14,6 +14,7 @@ namespace SistemaAcademico.Data
         public DbSet<Professor> Professor { get; set; }
         public DbSet<Turma> Turma{ get; set; }
         public DbSet<CursoDisciplina> CursoDisciplina { get; set; }
+        public DbSet<Frequencia> Frequencia { get; set; }
       
 
 

@@ -326,6 +326,113 @@
         }
       }
     },
+    "/Frequencia": {
+      "get": {
+        "tags": [
+          "Frequencia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Frequencia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FrequenciaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Frequencia/{id}": {
+      "get": {
+        "tags": [
+          "Frequencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Frequencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FrequenciaEdit"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Frequencia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Horario": {
       "get": {
         "tags": [
@@ -941,6 +1048,44 @@
           "id_curso": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FrequenciaEdit": {
+        "type": "object",
+        "properties": {
+          "id_Frequencia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_Matricula": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data_Frequencia": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "presenca": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FrequenciaRequest": {
+        "type": "object",
+        "properties": {
+          "id_Matricula": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data_Frequencia": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "presenca": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

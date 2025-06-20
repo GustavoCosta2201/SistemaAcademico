@@ -1,51 +1,107 @@
 ﻿@page "/dashboard"
-@inject MatriculaAPI matriculaAPI
-@inject CursoAPI cursoAPI
+@inject NavigationManager NavigationManager
 
-<h3>DashBoard</h3>
+<PageTitle>Dashboard</PageTitle>
 
-@if (data == null || labels == null)
-{
-    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
-}
-else
-{
-    <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@data" InputLabels="@labels">
-        <CustomGraphics>
-            <text class="donut-inner-text" x="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica">Total</text>
-            <text class="donut-inner-text" x="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica">@data.Sum()</text>
-        </CustomGraphics>
-    </MudChart>
-}
+<h3>Dashboard do Sistema Acadêmico</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total de Alunos</div>
+            <div class="card-body">
+                <h4 class="card-title">@TotalAlunos</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Total de Cursos</div>
+            <div class="card-body">
+                <h4 class="card-title">@TotalCursos</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">Total de Professores</div>
+            <div class="card-body">
+                <h4 class="card-title">@TotalProfessores</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <LineChart TItem="double" @ref="lineChart" Style="height: 300px;" />
+    </div>
+
+    <div class="col-md-6">
+        <PieChart TItem="double" @ref="pieChart" Style="height: 300px;" />
+    </div>
+</div>
 
 @code {
-    private double[]? data;
-    private string[]? labels;
+    private LineChart<double> lineChart;
+    private PieChart<double> pieChart;
 
-    protected override async Task OnInitializedAsync()
+    // Simulando dados, você pode trocar para carregar da API
+    private int TotalAlunos = 250;
+    private int TotalCursos = 15;
+    private int TotalProfessores = 30;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var matriculas = await matriculaAPI.GetMatriculaAsync();
-        var cursos = await cursoAPI.GetCursoAsync();
+        if (firstRender)
+        {
+            await SetupLineChart();
+            await SetupPieChart();
+        }
+    }
 
-        if (matriculas is null || !matriculas.Any() || cursos is null || !cursos.Any())
-            return;
+    private async Task SetupLineChart()
+    {
+        var lineChartDataset = new LineChartDataset<double>
+        {
+            Label = "Alunos por semestre",
+            Data = new List<double> { 50, 80, 120, 150, 200, 250 },
+            Fill = true,
+            BackgroundColor = "rgba(54, 162, 235, 0.2)",
+            BorderColor = "rgba(54, 162, 235, 1)",
+            // Tension = 0.4
+        };
 
-        // Agrupar por ID do curso
-        var agrupado = matriculas
-            .GroupBy(m => m.Id_Curso)
-            .Select(g => new
+        await lineChart.Clear();
+
+        await lineChart.AddLabelsDatasetsAndUpdate(
+            new[] { "Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6" },
+            lineChartDataset
+        );
+    }
+
+    private async Task SetupPieChart()
+    {
+        var pieChartDataset = new PieChartDataset<double>
+        {
+            Label = "Distribuição de Cursos",
+            Data = new List<double> { 30, 50, 20 },
+            BackgroundColor = new List<string>
             {
-                IdCurso = g.Key,
-                Quantidade = g.Count()
-            })
-            .ToList();
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 235, 0.6)",
+                "rgba(255, 206, 86, 0.6)"
+            },
+            HoverOffset = 10
+        };
 
-        data = agrupado.Select(a => (double)a.Quantidade).ToArray();
+        await pieChart.Clear();
 
-        // Pega o nome do curso com base no ID
-        labels = agrupado
-            .Select(a =>
-                cursos.FirstOrDefault(c => c.Id_Curso == a.IdCurso)?.nome ?? "Desconhecido"
-            ).ToArray();
+        await pieChart.AddLabelsDatasetsAndUpdate(
+            new[] { "Tecnologia", "Engenharia", "Artes" },
+            pieChartDataset
+        );
     }
 }

@@ -1,0 +1,121 @@
+﻿@page "/Faltas"
+
+@inject FrequenciaAPI frequenciaAPI
+@inject AlunoAPI alunoAPI
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+
+<MudStack Class="mt-4 mb-4" Row="true" Justify="Justify.SpaceBetween">
+    <MudText Class="mb-4" Typo="Typo.h4">Frequência dos Alunos</MudText>
+    <MudPagination Count="@totalPaginas" SelectedChanged="PaginaMudou"></MudPagination>
+</MudStack>
+
+@if (!string.IsNullOrEmpty(MensagemAlerta))
+{
+    <MudAlert Severity="Severity.Error" Variant="Variant.Filled">@MensagemAlerta</MudAlert>
+}
+
+@if (AlunoFrequenciaPorPagina is not null)
+{
+    <MudTable Items="AlunoFrequenciaPorPagina" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Código</MudTh>
+            <MudTh>Nome</MudTh>
+            <MudTh>Total de Faltas</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Telefone</MudTh>
+            <MudTh>Endereço</MudTh>
+            <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Código">@context.Id_Aluno</MudTd>
+            <MudTd DataLabel="Nome">@context.Nome</MudTd>
+            <MudTd DataLabel="Total de Faltas">@context.TotalFaltas</MudTd>
+            <MudTd DataLabel="Email">@context.Email</MudTd>
+            <MudTd DataLabel="Telefone">@context.Telefone</MudTd>
+            <MudTd DataLabel="Endereço">@context.Endereco</MudTd>
+            <MudTd>
+                <MudTooltip Text="Detalhes">
+                    <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Info" Size="Size.Small" @onclick="() => VerDetalhes(context.Id_Aluno)" />
+                </MudTooltip>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+@code {
+    private List<AlunoFrequenciaViewModel> AlunoFrequencia = new();
+    private List<AlunoFrequenciaViewModel> AlunoFrequenciaPorPagina = new();
+
+    private int tamanho = 8;
+    private int TotalItens;
+    private int totalPaginas;
+    private int paginaAtual = 1;
+
+    private string MensagemAlerta = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Carregar alunos
+            var alunos = await alunoAPI.GetAlunosAsync();
+            // Carregar frequencias
+            var frequencias = await frequenciaAPI.GetFrequenciasAsync();
+
+            // Agrupar faltas por aluno
+            AlunoFrequencia = (from aluno in alunos
+                               join freqGroup in frequencias
+                                    .Where(f => !f.Presenca) // faltas apenas (Presenca == false)
+                                    .GroupBy(f => f.Id_Matricula)
+                                    on aluno.Id_Aluno equals freqGroup.Key into fg
+                               from subFreq in fg.DefaultIfEmpty()
+                               select new AlunoFrequenciaViewModel
+                               {
+                                   Id_Aluno = aluno.Id_Aluno,
+                                   Nome = aluno.nome,
+                                   Email = aluno.email,
+                                   Telefone = aluno.telefone,
+                                   Endereco = aluno.endereco,
+                                   TotalFaltas = fg?.Count() ?? 0
+                               }).ToList();
+
+            AlunoFrequencia = AlunoFrequencia.OrderByDescending(a => a.TotalFaltas).ToList();
+
+            TotalItens = AlunoFrequencia.Count;
+            totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+            PaginaMudou(1);
+        }
+        catch (Exception ex)
+        {
+            MensagemAlerta = "Erro ao carregar dados: " + ex.Message;
+        }
+    }
+
+    private void PaginaMudou(int pageNumber)
+    {
+        paginaAtual = pageNumber;
+        var indice = (paginaAtual - 1) * tamanho;
+        AlunoFrequenciaPorPagina = AlunoFrequencia
+            .Skip(indice)
+            .Take(tamanho)
+            .ToList();
+    }
+
+    private void VerDetalhes(int idAluno)
+    {
+        // Navegar para uma tela de detalhes, se quiser
+        navigationManager.NavigateTo($"/DetalhesFrequencia/{idAluno}");
+    }
+
+    // ViewModel para exibir na tabela
+    private class AlunoFrequenciaViewModel
+    {
+        public int Id_Aluno { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Telefone { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
+        public int TotalFaltas { get; set; }
+    }
+}

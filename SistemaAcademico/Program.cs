@@ -29,6 +29,7 @@ builder.Services.AddTransient<DAL<Matricula>>();
 builder.Services.AddTransient<DAL<Nota>>();
 builder.Services.AddTransient<DAL<Professor>>();
 builder.Services.AddTransient<DAL<Turma>>();
+builder.Services.AddTransient<DAL<Frequencia>>();
 
 
 var app = builder.Build();
@@ -48,6 +49,7 @@ app.AddEndPointsNota();
 app.AddEndPointsProfessor();
 app.AddEndPointsTurma();
 app.AddEndPointsHorario();
+app.AddEndPointsFrequencia();
 
 
 app.UseHttpsRedirection();

@@ -1,4 +1,5 @@
-﻿using SistemaAcademico.Request;
+﻿using SistemaAcademico.Response;
+using SistemaAcademico.Request;
 using System.Net.Http.Json;
 
 namespace SistemaAcademico.Web2.Services

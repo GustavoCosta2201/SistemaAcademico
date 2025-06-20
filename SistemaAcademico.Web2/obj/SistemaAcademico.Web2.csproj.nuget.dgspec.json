@@ -50,6 +50,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[1.7.7, )"
+            },
+            "Blazorise.Charts": {
+              "target": "Package",
+              "version": "[1.7.7, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[1.7.7, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[8.0.2, )"

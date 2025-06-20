@@ -372,6 +372,130 @@
     ]
   },
   {
+    "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_0",
+    "RelativePath": "Frequencia/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Frequencia"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_2",
+    "RelativePath": "Frequencia/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "freqRequest",
+        "Type": "SistemaAcademico.Request.FrequenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Frequencia"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_1",
+    "RelativePath": "Frequencia/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Frequencia"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_3",
+    "RelativePath": "Frequencia/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "edit",
+        "Type": "SistemaAcademico.Request.FrequenciaEdit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Frequencia"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_4",
+    "RelativePath": "Frequencia/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Frequencia"
+    ]
+  },
+  {
     "ContainingType": "SistemaAcademico.EndPoints.HorarioExtension\u002B\u003C\u003Ec",
     "Method": "\u003CAddEndPointsHorario\u003Eb__0_0",
     "RelativePath": "Horario/",

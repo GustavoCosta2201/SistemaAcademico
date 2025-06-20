@@ -3,68 +3,48 @@
   "WorkspaceRootPath": "C:\\3- Estudos\\C#\\SistemaAcademico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\quadrohorario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\quadrohorario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\frequencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\frequencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\data\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\data\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\frequenciaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\frequenciaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\cursodisciplina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\cursodisciplina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\disciplina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\disciplina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\turma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\turma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\matricula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\matricula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\notas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\notas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\request\\frequenciarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\request\\frequenciarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\request\\frequenciaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\request\\frequenciaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\services\\notaapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\services\\notaapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\request\\frequenciarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\request\\frequenciarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\response\\notaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\response\\notaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\request\\frequenciaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\request\\frequenciaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\notaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\notaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\faltas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\faltas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,210 +62,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Curso.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Curso.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Curso.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Curso.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Curso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:53.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CursoDisciplina.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\CursoDisciplina.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\CursoDisciplina.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\CursoDisciplina.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\CursoDisciplina.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FrequenciaRequest.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FrequenciaRequest.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Request\\FrequenciaRequest.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FrequenciaRequest.cs",
+              "RelativeToolTip": "SistemaAcademico\\Request\\FrequenciaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:52.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Professor.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Professor.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Professor.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Professor.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Professor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:47.662Z",
+              "WhenOpened": "2025-06-20T14:38:13.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Turma.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Turma.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Turma.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Turma.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Turma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FrequenciaEdit.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FrequenciaEdit.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Request\\FrequenciaEdit.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FrequenciaEdit.cs",
+              "RelativeToolTip": "SistemaAcademico\\Request\\FrequenciaEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:45.771Z",
+              "WhenOpened": "2025-06-20T14:37:56.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Matricula.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Matricula.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Matricula.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Matricula.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Matricula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "FrequenciaRequest.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FrequenciaRequest.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Request\\FrequenciaRequest.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FrequenciaRequest.cs",
+              "RelativeToolTip": "SistemaAcademico.Web2\\Request\\FrequenciaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:43.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Disciplina.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Disciplina.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Disciplina.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Disciplina.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Disciplina.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:41.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Aluno.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Aluno.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Aluno.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Aluno.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Aluno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:44:37.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QuadroHorario.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\QuadroHorario.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\QuadroHorario.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\QuadroHorario.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\views\\QuadroHorario.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T14:38:21.542Z",
+              "WhenOpened": "2025-06-20T14:37:25.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Nota.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Nota.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Nota.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Nota.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Nota.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Title": "FrequenciaEdit.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FrequenciaEdit.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Request\\FrequenciaEdit.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FrequenciaEdit.cs",
+              "RelativeToolTip": "SistemaAcademico.Web2\\Request\\FrequenciaEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:31:25.556Z",
+              "WhenOpened": "2025-06-20T14:37:20.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Program.cs",
               "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Program.cs",
               "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Program.cs",
               "RelativeToolTip": "SistemaAcademico.Web2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:26:26.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\App.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\App.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\App.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T14:26:23.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T14:25:29.662Z",
+              "WhenOpened": "2025-06-20T14:26:51.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Notas.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Notas.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Notas.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Notas.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Notas.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA2AAAAAAAAAA==",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "SistemaAcademico.Web2\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T14:25:05.247Z",
+              "WhenOpened": "2025-06-20T14:24:04.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NotaAPI.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\NotaAPI.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Services\\NotaAPI.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\NotaAPI.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Services\\NotaAPI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:21:34.5Z",
+              "DocumentIndex": 10,
+              "Title": "Faltas.razor",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Faltas.razor",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Faltas.razor",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Faltas.razor",
+              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Faltas.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-20T14:23:39.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NotaResponse.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Response\\NotaResponse.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Response\\NotaResponse.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Response\\NotaResponse.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Response\\NotaResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Frequencia.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Frequencia.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Frequencia.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Frequencia.cs",
+              "RelativeToolTip": "SistemaAcademico\\Models\\Frequencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:21:23.016Z",
+              "WhenOpened": "2025-06-20T14:21:08.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NotaExtension.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\NotaExtension.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\NotaExtension.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\NotaExtension.cs",
-              "RelativeToolTip": "SistemaAcademico\\EndPoints\\NotaExtension.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAswEQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DAL.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Data\\DAL.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Data\\DAL.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Data\\DAL.cs",
+              "RelativeToolTip": "SistemaAcademico\\Data\\DAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T14:21:08.856Z",
+              "WhenOpened": "2025-06-20T14:19:38.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Program.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Program.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Program.cs",
+              "RelativeToolTip": "SistemaAcademico\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:19:23.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrequenciaExtension.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
+              "RelativeToolTip": "SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAnwDsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:18:17.623Z",
               "EditorCaption": ""
             }
           ]

@@ -86,3 +86,14 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\SistemaAcade
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\SistemaAcademico.API.staticwebassets.runtime.json
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Blazorise.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Blazorise.Charts.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Blazorise.Licensing.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Lambda2Js.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico\bin\Debug\net8.0\Microsoft.JSInterop.dll
