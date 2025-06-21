@@ -33,6 +33,7 @@ builder.Services.AddTransient<DAL<Frequencia>>();
 builder.Services.AddTransient<DAL<Financeiro>>();
 
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -52,6 +53,7 @@ app.AddEndPointsTurma();
 app.AddEndPointsHorario();
 app.AddEndPointsFrequencia();
 app.AddEndPointsFinanceiro();
+app.AddEndPointsRelatorio();
 
 
 app.UseHttpsRedirection();

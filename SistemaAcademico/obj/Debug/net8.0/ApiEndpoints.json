@@ -1032,6 +1032,25 @@
     ]
   },
   {
+    "ContainingType": "SistemaAcademico.EndPoints.RelatorioExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsRelatorio\u003Eb__0_0",
+    "RelativePath": "Relatorio/RendimentoPorDisciplina",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Relat\u00F3rio"
+    ]
+  },
+  {
     "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
     "Method": "\u003CAddEndPointsTurma\u003Eb__0_0",
     "RelativePath": "Turma/",

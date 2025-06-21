@@ -33,6 +33,7 @@ internal class Program
         builder.Services.AddScoped<DisciplinaAPI>();
         builder.Services.AddScoped<FrequenciaAPI>();
         builder.Services.AddScoped<FinanceiroAPI>();
+        builder.Services.AddScoped<RelatorioAPI>();
 
 
         builder.Services.AddMudServices();

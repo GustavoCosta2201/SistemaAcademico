@@ -905,6 +905,18 @@
         }
       }
     },
+    "/Relatorio/RendimentoPorDisciplina": {
+      "get": {
+        "tags": [
+          "Relatório"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Turma": {
       "get": {
         "tags": [

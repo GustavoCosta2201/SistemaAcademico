@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\3- Estudos\\C#\\SistemaAcademico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\financeiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\financeiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\relatorios\\relatoriodisciplina.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\relatorios\\relatoriodisciplina.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\response\\financeiroresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\response\\financeiroresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\services\\relatorioapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\services\\relatorioapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\request\\financeirorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\request\\financeirorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\relatorioextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\relatorioextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\financeiroextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\financeiroextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\frequenciaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\frequenciaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\financeiro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\financeiro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\request\\financeirorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\request\\financeirorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\services\\financeiroapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\services\\financeiroapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\response\\relatoriorendimentoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\response\\relatoriorendimentoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,132 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FinanceiroRequest.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FinanceiroRequest.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Request\\FinanceiroRequest.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\FinanceiroRequest.cs",
-              "RelativeToolTip": "SistemaAcademico\\Request\\FinanceiroRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RelatorioAPI.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\RelatorioAPI.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Services\\RelatorioAPI.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\RelatorioAPI.cs",
+              "RelativeToolTip": "SistemaAcademico.Web2\\Services\\RelatorioAPI.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T01:01:34.183Z",
+              "WhenOpened": "2025-06-21T14:56:04.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Financeiro.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Financeiro.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Financeiro.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Financeiro.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Financeiro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:59:56.281Z",
+              "Title": "RelatorioDisciplina.razor",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T14:52:17.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrequenciaExtension.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
-              "RelativeToolTip": "SistemaAcademico\\EndPoints\\FrequenciaExtension.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RelatorioExtension.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
+              "RelativeToolTip": "SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:53:20.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Program.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Program.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Program.cs",
-              "RelativeToolTip": "SistemaAcademico\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:51:55.28Z",
+              "WhenOpened": "2025-06-21T14:43:35.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FinanceiroExtension.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FinanceiroExtension.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\FinanceiroExtension.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\FinanceiroExtension.cs",
-              "RelativeToolTip": "SistemaAcademico\\EndPoints\\FinanceiroExtension.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAcwCwAAAB4AAAAAAAAAA==",
+              "Title": "RelatorioRendimentoResponse.cs",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Response\\RelatorioRendimentoResponse.cs",
+              "RelativeDocumentMoniker": "SistemaAcademico\\Response\\RelatorioRendimentoResponse.cs",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Response\\RelatorioRendimentoResponse.cs",
+              "RelativeToolTip": "SistemaAcademico\\Response\\RelatorioRendimentoResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:51:29.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Program.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Program.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Program.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:49:29.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Financeiro.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Financeiro.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Financeiro.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Financeiro.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Financeiro.razor",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAEMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T00:44:35.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FinanceiroResponse.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Response\\FinanceiroResponse.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Response\\FinanceiroResponse.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Response\\FinanceiroResponse.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Response\\FinanceiroResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:41:15.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FinanceiroRequest.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FinanceiroRequest.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Request\\FinanceiroRequest.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Request\\FinanceiroRequest.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Request\\FinanceiroRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:39:10.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FinanceiroAPI.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\FinanceiroAPI.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\Services\\FinanceiroAPI.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\Services\\FinanceiroAPI.cs",
-              "RelativeToolTip": "SistemaAcademico.Web2\\Services\\FinanceiroAPI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:36:52.267Z",
+              "WhenOpened": "2025-06-21T14:42:55.736Z",
               "EditorCaption": ""
             }
           ]

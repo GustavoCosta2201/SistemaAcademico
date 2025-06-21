@@ -1,122 +1,62 @@
-﻿@* @page "/relatorio-rendimento"
-@inject NotaAPI NotaAPI
-@inject DisciplinaAPI DisciplinaAPI
-@inject TurmaAPI TurmaAPI
+﻿@page "/RendimentoPorDisciplina"
+@inject RelatorioAPI RelatorioAPI
 
-<MudPaper Class="p-4">
-    <MudText Typo="Typo.h5" Class="mb-4">Relatório de Rendimento por Disciplina</MudText>
+<MudPaper Class="p-6">
+    <MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">
+        Relatório de Rendimento por Disciplina
+    </MudText>
 
-    <MudGrid>
-        <MudItem xs="12" sm="4">
-            <MudSelect T="int" Label="Filtrar por Turma" @bind-Value="turmaSelecionada">
-                <MudSelectItem Value="0">Todas</MudSelectItem>
-                @foreach (var turma in turmas)
-                {
-                    <MudSelectItem Value="@turma.Id_Turma">@turma.Id_Turma</MudSelectItem>
-                }
-            </MudSelect>
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Filtrar">Aplicar Filtro</MudButton>
-        </MudItem>
-        <MudItem xs="12" sm="4" Class="d-flex justify-end">
-            <MudButton Color="Color.Info" OnClick="ExportarPDF">Exportar PDF</MudButton>
-            <MudButton Class="ml-2" Color="Color.Success" OnClick="ExportarExcel">Exportar Excel</MudButton>
-        </MudItem>
-    </MudGrid>
+    @if (Relatorio == null)
+    {
+        <MudProgressCircular Indeterminate="true" />
+    }
+    else if (!Relatorio.Any())
+    {
+        <MudText>Nenhum dado encontrado.</MudText>
+    }
+    else
+    {
+        <MudTable Items="@Relatorio" Dense="true" Class="mb-6">
+            <HeaderContent>
+                <MudTh>Disciplina</MudTh>
+                <MudTh>Média</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.NomeDisciplina</MudTd>
+                <MudTd>@context.Media.ToString("0.00")</MudTd>
+            </RowTemplate>
+        </MudTable>
 
-    <MudDivider Class="my-4" />
-
-    <MudTable Items="relatorio" Hover="true">
-        <HeaderContent>
-            <MudTh>Disciplina</MudTh>
-            <MudTh>Média da Turma</MudTh>
-        </HeaderContent>
-        <RowTemplate>
-            <MudTd>@context.NomeDisciplina</MudTd>
-            <MudTd>@context.Media.ToString("F2")</MudTd>
-        </RowTemplate>
-    </MudTable>
-
-    <MudDivider Class="my-4" />
-
-    <LineChart TItem="double" @ref="chart" Style="height:350px;" />
-
+        <MudChart ChartType="MudBlazor.ChartType.Bar" Class="w-full h-96" Labels="@DisciplinaLabels" Datasets="@Datasets" />
+    }
 </MudPaper>
 
 @code {
-    private List<DisciplinaResponse> disciplinas = new();
-    private List<NotaResponse> notas = new();
-    private List<TurmaResponse> turmas = new();
-
-    private List<RelatorioRendimentoDto> relatorio = new();
-    private int turmaSelecionada = 0;
-    private LineChart<double>? chart;
+    private List<RendimentoDisciplinaResponse> Relatorio = new();
+    private string[] DisciplinaLabels = Array.Empty<string>();
+    private List<ChartSeries> Datasets = new();
 
     protected override async Task OnInitializedAsync()
     {
-        turmas = (await TurmaAPI.GetTurmaAsync())?.ToList() ?? new();
-        await Filtrar();
-    }
-
-    private async Task Filtrar()
-    {
-        notas = (await NotaAPI.GetNotaAsync())?.ToList() ?? new();
-        disciplinas = (await DisciplinaAPI.GetDisciplinasAsync())?.ToList() ?? new();
-
-        var filtradas = turmaSelecionada == 0
-            ? notas
-            : notas.Where(n => n.id_turma == turmaSelecionada).ToList();
-
-        relatorio = disciplinas.Select(d => new RelatorioRendimentoDto
+        try
         {
-            NomeDisciplina = d.nome,
-            Media = filtradas
-                .Where(n => n.Id_Disciplina == d.Id_Disciplina)
-                .Select(n => (double?)n.nota_final)
-                .DefaultIfEmpty(0)
-                .Average() ?? 0
-        }).ToList();
+            var resultado = await RelatorioAPI.GetMediaNotasPorDisciplina();
+            Relatorio = resultado?.ToList() ?? new();
 
-        await AtualizarGrafico();
-    }
+            DisciplinaLabels = Relatorio.Select(r => r.NomeDisciplina).ToArray();
 
-    private async Task AtualizarGrafico()
+   Datasets = new List<ChartSeries>
+{
+    new ChartSeries
     {
-        if (chart is not null)
+        Name = "Média",
+        Data = Relatorio.Select(r => r.Media).ToArray()
+    }
+};
+        }
+        catch (Exception ex)
         {
-            await chart.Clear();
-
-            var labels = relatorio.Select(x => x.NomeDisciplina).ToList();
-            var dados = relatorio.Select(x => x.Media).ToList();
-
-            await chart.AddLabelsDatasetsAndUpdate(labels, new LineChartDataset<double>
-            {
-                Label = "Média das Notas",
-                Data = dados,
-                Fill = true,
-                BorderColor = "rgba(76, 175, 80, 1)",
-                BackgroundColor = "rgba(76, 175, 80, 0.3)",
-                //Tension = 0.4
-            });
+            Console.WriteLine("Erro ao carregar relatório: " + ex.Message);
         }
     }
-
-    private async Task ExportarPDF()
-    {
-        // Exportação com JS interop ou biblioteca externa como BlazorDownloadFile
-        await Task.CompletedTask;
-    }
-
-    private async Task ExportarExcel()
-    {
-        // Similar à exportação em PDF, usando ClosedXML ou EPPlus no backend
-        await Task.CompletedTask;
-    }
-
-    public class RelatorioRendimentoDto
-    {
-        public string NomeDisciplina { get; set; } = "";
-        public double Media { get; set; }
-    }
-} *@
+}
