@@ -1,0 +1,45 @@
+﻿@page "/StatusMatricula"
+@inject RelatorioAPI Api
+
+<MudPaper Class="p-6 m-4" Elevation="4">
+    <MudText Typo="Typo.h5" Color="Color.Primary">Relatório de Status de Matrícula</MudText>
+
+    @if (!string.IsNullOrEmpty(MensagemErro))
+    {
+        <MudAlert Severity="Severity.Error">@MensagemErro</MudAlert>
+    }
+    else if (Relatorio == null)
+    {
+        <MudProgressCircular Indeterminate="true" />
+    }
+    else
+    {
+        <MudTable Items="@Relatorio" Striped="true">
+            <HeaderContent>
+                <MudTh>Status</MudTh>
+                <MudTh>Quantidade</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.Status</MudTd>
+                <MudTd>@context.Quantidade</MudTd>
+            </RowTemplate>
+        </MudTable>
+    }
+</MudPaper>
+
+@code {
+    private List<RelatorioStatusMatriculaResponse>? Relatorio;
+    private string MensagemErro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Relatorio = await Api.GetStatusMatriculasAsync();
+        }
+        catch (Exception ex)
+        {
+            MensagemErro = $"Erro ao carregar relatório: {ex.Message}";
+        }
+    }
+}

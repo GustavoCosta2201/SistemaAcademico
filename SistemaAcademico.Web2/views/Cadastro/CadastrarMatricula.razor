@@ -11,7 +11,7 @@
 
     @if (sucesso)
     {
-        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">Matricula cadastrada com sucesso!</MudAlert>
+        <MudAlert Severity="Severity.Success" Variant="Variant.Filled">Matrícula cadastrada com sucesso!</MudAlert>
     }
 
     @if (!string.IsNullOrEmpty(MensagemAlerta) && CamposVazios())
@@ -21,18 +21,17 @@
 
     <MudForm Class="mt-6">
 
-
         <MudSelect T="int" Label="Aluno" @bind-Value="Id_Aluno" Class="mt-4" Required="true" RequiredError="Campo obrigatório.">
             @if (Aluno != null && Aluno.Any())
             {
                 @foreach (var A in Aluno)
                 {
-                    <MudSelectItem Value="A.Id_Aluno">@A.nome</MudSelectItem>
+                    <MudSelectItem Value="@A.Id_Aluno">@A.nome</MudSelectItem>
                 }
             }
             else
             {
-                <MudSelectItem Value="0">Nenhuma categoria encontrada</MudSelectItem>
+                <MudSelectItem Value="0">Nenhum aluno encontrado</MudSelectItem>
             }
         </MudSelect>
 
@@ -41,22 +40,20 @@
             {
                 @foreach (var C in Curso)
                 {
-                    <MudSelectItem Value="C.Id_Curso">@C.nome</MudSelectItem>
+                    <MudSelectItem Value="@C.Id_Curso">@C.nome</MudSelectItem>
                 }
             }
             else
             {
-                <MudSelectItem Value="0">Nenhuma categoria encontrada</MudSelectItem>
+                <MudSelectItem Value="0">Nenhum curso encontrado</MudSelectItem>
             }
         </MudSelect>
 
-        <MudTextField Class="mt-4" T="string" Label="Status" Placeholder="Status"
-                      InputType="InputType.Text"
-                      @bind-Value="Status"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Description" />
-
+        <MudSelect T="string" Label="Status" @bind-Value="Status" Required="true" RequiredError="Campo obrigatório.">
+            <MudSelectItem Value="@("Regular")">Regular</MudSelectItem>
+            <MudSelectItem Value="@("Trancada")">Trancada</MudSelectItem>
+            <MudSelectItem Value="@("Cancelada")">Cancelada</MudSelectItem>
+        </MudSelect>
 
 
         <div class="d-flex justify-end mt-6">
@@ -71,24 +68,21 @@
     </MudForm>
 </MudPaper>
 
-
 @code {
     private int Id_Aluno;
     private int Id_Curso;
-    private string Status;
+    private string Status = "Regular"; // valor padrão
     private DateTime Data_Matricula = DateTime.UtcNow;
     private string MensagemAlerta = string.Empty;
     private bool sucesso = false;
     private ICollection<AlunoResponse>? Aluno;
     private ICollection<CursoResponse>? Curso;
 
-
     protected override async Task OnInitializedAsync()
     {
         Aluno = await AlunoAPI.GetAlunosAsync();
         Curso = await CursoAPI.GetCursoAsync();
     }
-
 
     public async Task Cadastrar()
     {
@@ -98,18 +92,14 @@
             return;
         }
 
-        var Matricula = new MatriculaRequest(Id_Aluno, Id_Curso, Data_Matricula, Status);
+        var matricula = new MatriculaRequest(Id_Aluno, Id_Curso, Data_Matricula, Status);
         sucesso = true;
-        await MatriculaAPI.AddMatriculaAsync(Matricula);
+        await MatriculaAPI.AddMatriculaAsync(matricula);
         navigationManager.NavigateTo("/Matricula");
-
     }
-
 
     private bool CamposVazios()
     {
         return Id_Aluno == 0 || Id_Curso == 0 || string.IsNullOrEmpty(Status);
     }
-
-
 }

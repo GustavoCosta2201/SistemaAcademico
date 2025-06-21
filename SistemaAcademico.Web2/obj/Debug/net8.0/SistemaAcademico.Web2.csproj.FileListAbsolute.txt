@@ -1095,6 +1095,6 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compres
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\fwjabplbw9-yfczqllojr.gz
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\sn1emd5j6r-8pd59v0o54.gz
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\2wyvydkak2-n4ppp9nmdx.gz
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\jv93kjchah-4t9nprz8kg.gz
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\bky4k2lh7w-yc7r4o2mdx.gz
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\dpklxnaubv-kbedud8ukw.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\jv93kjchah-9hytw1ay27.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\bky4k2lh7w-ehzpkjev5a.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\dpklxnaubv-pufi3r9sbe.gz

@@ -917,6 +917,30 @@
         }
       }
     },
+    "/Relatorio/TurmaDisciplina": {
+      "get": {
+        "tags": [
+          "Relatórios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Relatorio/StatusMatricula": {
+      "get": {
+        "tags": [
+          "Relatórios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Turma": {
       "get": {
         "tags": [

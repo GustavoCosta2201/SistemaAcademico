@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaAcademico.Data;
 using SistemaAcademico.Models;
+using SistemaAcademico.Web2.Response;
 
 namespace SistemaAcademico.EndPoints
 {
@@ -36,5 +37,62 @@ namespace SistemaAcademico.EndPoints
                 return Results.Ok(resultado);
             });
         }
+
+        public static void AddEndPointsRelatorioTurmaDisciplina(this WebApplication app)
+        {
+            var group = app.MapGroup("Relatorio").WithTags("Relatórios");
+
+            group.MapGet("/TurmaDisciplina", (
+                [FromServices] DAL<Turma> dalTurma,
+                [FromServices] DAL<Matricula> dalMatricula,
+                [FromServices] DAL<Disciplina> dalDisciplina,
+                [FromServices] DAL<Professor> dalProfessor
+                ) =>
+            {
+                var turmas = dalTurma.GetAll();
+
+                var resultado = turmas.Select(t =>
+                {
+                    var disciplina = dalDisciplina.GetItem(d => d.Id_Disciplina == t.Id_Disciplina);
+                    var professor = dalProfessor.GetItem(p => p.Id_Professor == t.Id_Professor);
+
+                    var totalAlunos = dalMatricula.GetAll().Count(m => m.Id_Curso == disciplina.Id_Disciplina);
+
+                    return new RelatorioTurmaDisciplinaResponse
+                    {
+                        Disciplina = disciplina?.Nome ?? "Não encontrado",
+                        Professor = professor?.Nome ?? "Não encontrado",
+                        Ano = t.Ano,
+                        Semestre = t.Semestre,
+                        Turno = t.Turno,
+                        TotalAlunos = totalAlunos
+                    };
+                }).ToList();
+
+                return Results.Ok(resultado);
+            });
+        }
+
+        public static void AddEndPointsRelatorioStatusMatricula(this WebApplication app)
+        {
+            var group = app.MapGroup("Relatorio").WithTags("Relatórios");
+
+            group.MapGet("/StatusMatricula", ([FromServices] DAL<Matricula> dal) =>
+            {
+                var resultado = dal.GetAll()
+                    .GroupBy(m => m.Status_Matricula)
+                    .Select(g => new RelatorioStatusMatriculaResponse
+                    {
+                        Status = g.Key.ToString(),
+                        Quantidade = g.Count()
+                    })
+                    .ToList();
+
+                return Results.Ok(resultado);
+            });
+        }
+
     }
+
 }
+

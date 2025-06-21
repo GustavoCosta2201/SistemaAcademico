@@ -28,5 +28,7 @@ namespace SistemaAcademico.Data
         {
             optionsBuilder.UseSqlServer(ConnectionString).UseLazyLoadingProxies(false);
         }
+
+
     }
 }

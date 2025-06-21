@@ -2,7 +2,17 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.mud-appbar-transparent {
+    background-color: transparent !important;
+    backdrop-filter: blur(8px); /* efeito blur opcional */
+}
 
+.mud-appbar-title {
+    flex-grow: 1;
+    text-align: right; /* Alinha o título para a direita */
+    margin-right: 16px;
+    color: #fff; /* Cor branca, pode alterar conforme o tema */
+}
 
 h1:focus {
     outline: none;

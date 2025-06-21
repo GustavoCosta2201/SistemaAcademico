@@ -1,0 +1,59 @@
+﻿@page "/RelatorioTurmas"
+@inject RelatorioAPI relatorioAPI
+@using SistemaAcademico.Response
+@using MudBlazor
+
+<MudPaper Class="p-6 mx-6 my-4" Elevation="4">
+    <MudText Typo="Typo.h5" Color="Color.Primary">Relatório de Turmas e Disciplinas</MudText>
+
+    @if (!string.IsNullOrEmpty(erro))
+    {
+        <MudAlert Severity="Severity.Error">@erro</MudAlert>
+    }
+    else if (relatorio == null)
+    {
+        <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+    }
+    else if (relatorio.Count == 0)
+    {
+        <MudText>Não há dados disponíveis.</MudText>
+    }
+    else
+    {
+        <MudTable Items="@relatorio">
+            <HeaderContent>
+                <MudTh>Disciplina</MudTh>
+                <MudTh>Professor</MudTh>
+                <MudTh>Ano</MudTh>
+                <MudTh>Semestre</MudTh>
+                <MudTh>Turno</MudTh>
+                <MudTh>Total Alunos</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Disciplina">@context.Disciplina</MudTd>
+                <MudTd DataLabel="Professor">@context.Professor</MudTd>
+                <MudTd DataLabel="Ano">@context.Ano</MudTd>
+                <MudTd DataLabel="Semestre">@context.Semestre</MudTd>
+                <MudTd DataLabel="Turno">@context.Turno</MudTd>
+                <MudTd DataLabel="Total Alunos">@context.TotalAlunos</MudTd>
+            </RowTemplate>
+        </MudTable>
+    }
+</MudPaper>
+
+@code {
+    private List<RelatorioTurmaDisciplinaResponse>? relatorio;
+    private string erro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            relatorio = (await relatorioAPI.GetRelatorioTurmasAsync())?.ToList();
+        }
+        catch (Exception ex)
+        {
+            erro = $"Erro ao carregar o relatório: {ex.Message}";
+        }
+    }
+}

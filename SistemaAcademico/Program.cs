@@ -54,6 +54,8 @@ app.AddEndPointsHorario();
 app.AddEndPointsFrequencia();
 app.AddEndPointsFinanceiro();
 app.AddEndPointsRelatorio();
+app.AddEndPointsRelatorioTurmaDisciplina();
+app.AddEndPointsRelatorioStatusMatricula();
 
 
 app.UseHttpsRedirection();

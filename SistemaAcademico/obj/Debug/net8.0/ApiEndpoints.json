@@ -1051,6 +1051,44 @@
     ]
   },
   {
+    "ContainingType": "SistemaAcademico.EndPoints.RelatorioExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsRelatorioStatusMatricula\u003Eb__2_0",
+    "RelativePath": "Relatorio/StatusMatricula",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Relat\u00F3rios"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.RelatorioExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsRelatorioTurmaDisciplina\u003Eb__1_0",
+    "RelativePath": "Relatorio/TurmaDisciplina",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Relat\u00F3rios"
+    ]
+  },
+  {
     "ContainingType": "SistemaAcademico.EndPoints.TurmaExtension\u002B\u003C\u003Ec",
     "Method": "\u003CAddEndPointsTurma\u003Eb__0_0",
     "RelativePath": "Turma/",
