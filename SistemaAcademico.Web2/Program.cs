@@ -32,6 +32,7 @@ internal class Program
         builder.Services.AddScoped<TurmaAPI>();
         builder.Services.AddScoped<DisciplinaAPI>();
         builder.Services.AddScoped<FrequenciaAPI>();
+        builder.Services.AddScoped<FinanceiroAPI>();
 
 
         builder.Services.AddMudServices();

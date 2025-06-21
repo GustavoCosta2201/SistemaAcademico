@@ -2,21 +2,21 @@
 {
     public class MatriculaEdit
     {
-        public int id_matricula { get; set; }
-        public int Id_aluno { get; set; }
-        public int IdCurso { get; set; }
+        public int Id_Matricula { get; set; }
+        public int Id_Aluno { get; set; }
+        public int Id_Curso { get; set; }
         public DateTime Data_Matricula { get; set; }
-        public string Status_Matricula { get; set; }
+        public string Status_Matricula { get; set; } = string.Empty;
 
         public MatriculaEdit() { }
 
-        public MatriculaEdit(int id_matricula, int Id_aluno, int IdCurso, DateTime Data_Matricula, string Status_Matricula)
+        public MatriculaEdit(int id_Matricula, int id_Aluno, int id_Curso, DateTime data_Matricula, string status_Matricula)
         {
-            this.id_matricula = id_matricula;
-            this.Id_aluno = Id_aluno;
-            this.IdCurso = IdCurso;
-            this.Data_Matricula = Data_Matricula;
-            this.Status_Matricula = Status_Matricula;
+            Id_Matricula = id_Matricula;
+            Id_Aluno = id_Aluno;
+            Id_Curso = id_Curso;
+            Data_Matricula = data_Matricula;
+            Status_Matricula = status_Matricula;
         }
     }
 }

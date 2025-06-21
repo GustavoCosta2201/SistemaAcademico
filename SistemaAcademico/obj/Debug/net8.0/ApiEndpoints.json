@@ -372,6 +372,130 @@
     ]
   },
   {
+    "ContainingType": "SistemaAcademico.EndPoints.FinanceiroExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFinanceiro\u003Eb__0_0",
+    "RelativePath": "Financeiro/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Financeiro"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FinanceiroExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFinanceiro\u003Eb__0_2",
+    "RelativePath": "Financeiro/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SistemaAcademico.Request.FinanceiroRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Financeiro"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FinanceiroExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFinanceiro\u003Eb__0_1",
+    "RelativePath": "Financeiro/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Financeiro"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FinanceiroExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFinanceiro\u003Eb__0_3",
+    "RelativePath": "Financeiro/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "SistemaAcademico.Request.FinanceiroRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Financeiro"
+    ]
+  },
+  {
+    "ContainingType": "SistemaAcademico.EndPoints.FinanceiroExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CAddEndPointsFinanceiro\u003Eb__0_4",
+    "RelativePath": "Financeiro/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Financeiro"
+    ]
+  },
+  {
     "ContainingType": "SistemaAcademico.EndPoints.FrequenciaExtension\u002B\u003C\u003Ec",
     "Method": "\u003CAddEndPointsFrequencia\u003Eb__0_0",
     "RelativePath": "Frequencia/",

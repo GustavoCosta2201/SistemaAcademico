@@ -117,27 +117,37 @@
         navigationManager.NavigateTo($"/EditarMatricula/{id}");
     }
 
-
-    public async Task onDeleteClick(int id)
+    private async Task onDeleteClick(int id)
     {
-        var result = await MatriculaAPI.DeleteMatriculaAsync(id);
-
-        if (result)
+        var parameters = new DialogParameters
         {
+            { nameof(Popup.ContentText), "Você realmente quer excluir essa Matricula?" },
+            { nameof(Popup.ButtonText), "Deletar" },
+            { nameof(Popup.Color), Color.Error }
+        };
 
-            var MatriculaRemove = Matriculas!.FirstOrDefault(e => e.Id_Matricula == id);
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 
-            if (MatriculaRemove != null)
+        var dialog = DialogService.Show<Popup>("Confirmar Deleção", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            var success = await MatriculaAPI.DeleteMatriculaAsync(id);
+
+            if (success)
             {
-                Matriculas.Remove(MatriculaRemove);
-                TotalItens = Matriculas.Count();
-                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
-                PaginaMudou(paginaAtual);
-
+                var MatriculaRemover = Matriculas!.FirstOrDefault(u => u.Id_Matricula == id);
+                if (MatriculaRemover != null)
+                {
+                    Matriculas!.Remove(MatriculaRemover);
+                    TotalItens = Aluno.Count();
+                    totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                    PaginaMudou(paginaAtual);
+                    StateHasChanged();
+                }
             }
-
         }
-        StateHasChanged();
     }
 
 

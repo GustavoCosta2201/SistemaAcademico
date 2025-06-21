@@ -1,0 +1,126 @@
+﻿@page "/Financeiro"
+@inject FinanceiroAPI financeiroAPI
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+
+<MudStack Class="mt-4 mb-4" Row="true" Justify="Justify.SpaceBetween">
+    <MudText Typo="Typo.h4">Financeiro Acadêmico</MudText>
+    <MudButton Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="AdicionarFinanceiro">Novo Registro</MudButton>
+</MudStack>
+
+<MudTextField @bind-Value="filtroTexto" Placeholder="Filtrar por descrição ou aluno" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Class="mb-4" Immediate="true" OnImmediateValueChanged="FiltrarMudou" />
+
+<MudTable Items="FinanceirosPorPagina" Hover="true" Loading="@carregando" Breakpoint="Breakpoint.Sm" Elevation="0">
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Valor</MudTh>
+        <MudTh>Data Vencimento</MudTh>
+        <MudTh>Status</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id_Financeiro</MudTd>
+        <MudTd DataLabel="Valor">@context.Valor.ToString("C")</MudTd>
+        <MudTd DataLabel="Data Vencimento">@context.Data_Vencimento.ToShortDateString()</MudTd>
+        <MudTd DataLabel="Status">@context.Status</MudTd>
+        <MudTd>
+            <MudTooltip Text="Editar">
+                <MudIconButton Color="Color.Secondary" Icon="@Icons.Material.Filled.Edit" OnClick="() => EditarFinanceiro(context.Id_Financeiro)" />
+            </MudTooltip>
+            <MudTooltip Text="Excluir">
+                <MudIconButton Color="Color.Error" Icon="@Icons.Material.Filled.Delete" OnClick="() => ConfirmarExcluir(context.Id_Financeiro)" />
+            </MudTooltip>
+        </MudTd>
+    </RowTemplate>
+</MudTable>
+
+<MudPagination PageSize="tamanhoPagina" Page="paginaAtual" PageChanged="PaginaMudou" TotalItems="totalItens" />
+
+@code {
+    private List<FinanceiroResponse> Financeiros = new();
+    private List<FinanceiroResponse> FinanceirosPorPagina = new();
+    private string filtroTexto = string.Empty;
+    private bool carregando = true;
+
+    private int paginaAtual = 1;
+    private int tamanhoPagina = 10;
+    private int totalItens;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarFinanceiros();
+    }
+
+    private async Task CarregarFinanceiros()
+    {
+        carregando = true;
+        var todos = await financeiroAPI.GetFinanceirosAsync();
+        Financeiros = todos?.ToList() ?? new List<FinanceiroResponse>();
+        totalItens = Financeiros.Count;
+        AplicarFiltroEPaginacao();
+        carregando = false;
+    }
+
+    private void AplicarFiltroEPaginacao()
+    {
+        var filtro = filtroTexto?.Trim().ToLower() ?? "";
+
+        var filtrados = string.IsNullOrEmpty(filtro)
+            ? Financeiros
+            : Financeiros.Where(f =>
+                (f.Status?.ToLower().Contains(filtro) ?? false)
+            // aqui pode adicionar filtro por aluno, curso, etc
+            ).ToList();
+
+        totalItens = filtrados.Count;
+
+        FinanceirosPorPagina = filtrados
+            .Skip((paginaAtual - 1) * tamanhoPagina)
+            .Take(tamanhoPagina)
+            .ToList();
+    }
+
+    private void FiltrarMudou(string text)
+    {
+        paginaAtual = 1;
+        AplicarFiltroEPaginacao();
+    }
+
+    private void PaginaMudou(int novaPagina)
+    {
+        paginaAtual = novaPagina;
+        AplicarFiltroEPaginacao();
+    }
+
+    private void AdicionarFinanceiro()
+    {
+        navigationManager.NavigateTo("/EditarFinanceiro/0"); // zero para novo registro
+    }
+
+    private void EditarFinanceiro(int id)
+    {
+        navigationManager.NavigateTo($"/EditarFinanceiro/{id}");
+    }
+
+    private async Task ConfirmarExcluir(int id)
+    {
+        var parameters = new DialogParameters
+        {
+            { "ContentText", "Deseja realmente excluir este registro financeiro?" },
+            { "ButtonText", "Excluir" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+        var dialog = DialogService.Show<Popup>("Confirmação", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Cancelled)
+        {
+            await financeiroAPI.DeleteFinanceiroAsync(id);
+            await CarregarFinanceiros();
+            StateHasChanged();
+        }
+    }
+}

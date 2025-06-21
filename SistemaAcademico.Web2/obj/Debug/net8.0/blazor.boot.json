@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SistemaAcademico.Web2",
   "resources": {
-    "hash": "sha256-DH+nLv/30W+zBfZNK/uja/b648KIr3lxuejqHu/AuKU=",
+    "hash": "sha256-jiwBi/S/A1pFNOn3ijkzWOdVD3WxXeKExsKwEPCpejI=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-RiGT44TFZmHOY+Oqvb8o8r+BJVWex6+dPxFxrOiWvFY="
     },
@@ -222,10 +222,10 @@
       "mscorlib.wasm": "sha256-Im6xq+lOse4P/VnAyrA3hwPstV67V5dB0EwQWcjipyE=",
       "netstandard.wasm": "sha256-PK0GLtj6kQVtZPzq0FZlnSdHh7geujg80LqKdJXA4pI=",
       "System.Private.CoreLib.wasm": "sha256-gEwccs7GbRSPGmeWBOKxNroYfyM+mZ7hqbP3ki1iwX0=",
-      "SistemaAcademico.Web2.wasm": "sha256-ZvyVArSSVwQwppsyZRbxAOJbFPGXVdFBK9khz3bs9BY="
+      "SistemaAcademico.Web2.wasm": "sha256-qM+0AnQxNCsZsHWMOUsVdQQxdhGxspN3+a/L6vnh4X4="
     },
     "pdb": {
-      "SistemaAcademico.Web2.pdb": "sha256-V0FNjEiKhsmju1U9PDHJ8Abi5Xaec3GWvCQGfBl79SI="
+      "SistemaAcademico.Web2.pdb": "sha256-853WCgmavn9u58Pyx/4v1N3q+U+MKOTkdpPTJ5rs7L4="
     }
   },
   "cacheBootResources": true,

@@ -31,7 +31,7 @@ namespace SistemaAcademico.Web2.Services
 
         public async Task UpdateMatriculaAsync(MatriculaEdit matriculaRequest)
         {
-            var url = $"/Matricula/{matriculaRequest.id_matricula}";
+            var url = $"/Matricula/{matriculaRequest.Id_Matricula}";
             await httpClient.PutAsJsonAsync(url, matriculaRequest);
         }
 

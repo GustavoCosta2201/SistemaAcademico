@@ -1,9 +1,11 @@
 ﻿@* @page "/EditarMatricula/{id:int}"
 @inject NavigationManager navigationManager
 @inject MatriculaAPI MatriculaAPI
+@inject AlunoAPI AlunoAPI
+@inject CursoAPI CursoAPI
 
 <MudPaper Class="px-8 pt-6 pb-8 mx-12 my-8" Elevation="3" Square="true">
-    <MudText Class="mt-8" Typo="Typo.h4" Color="Color.Primary">Editar Matricula</MudText>
+    <MudText Class="mt-8" Typo="Typo.h4" Color="Color.Primary">Editar Matrícula</MudText>
 
     @if (!string.IsNullOrEmpty(MensagemAlerta) && CamposVazios())
     {
@@ -12,40 +14,28 @@
 
     <MudForm Class="mt-6">
 
-        <MudTextField Class="mt-4" T="string" Placeholder="Nome da Categoria"
-                      InputType="InputType.Text"
-                      @bind-Value="Aluno.nome"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Category" />
+        <MudSelect T="int" Label="Aluno" @bind-Value="Matricula.Id_Aluno" Required="true" RequiredError="Campo obrigatório.">
+            @foreach (var aluno in Alunos)
+            {
+                <MudSelectItem T="int" Value="@aluno.Id_Aluno">@aluno.nome</MudSelectItem>
+            }
+        </MudSelect>
 
-        <MudTextField Class="mt-4" T="string" Label="Email" Placeholder="Email"
-                      InputType="InputType.Text"
-                      @bind-Value="Aluno.email"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Description" />
+        <MudSelect T="int" Label="Curso" @bind-Value="Matricula.Id_Curso" Required="true" RequiredError="Campo obrigatório.">
+            @foreach (var curso in Cursos)
+            {
+                <MudSelectItem T="int" Value="@curso.Id_Curso">@curso.nome</MudSelectItem>
+            }
+        </MudSelect>
 
-        <MudTextField Class="mt-4" T="string" Label="Senha" Placeholder="Senha"
-                      InputType="InputType.Password"
-                      @bind-Value="Aluno.senha"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Description" />
+        <MudDatePicker Label="Data da Matrícula" @bind-Date="Matricula.Data_Matricula" Required="true" RequiredError="Campo obrigatório." />
 
-        <MudTextField Mask="@mask1" Class="mt-4" T="string" Label="Telefone" Placeholder="Telefone"
-                      InputType="InputType.Text"
-                      @bind-Value="Aluno.telefone"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Description" />
-
-        <MudTextField Class="mt-4" T="string" Label="Endereço" Placeholder="Endereço"
-                      InputType="InputType.Text"
-                      @bind-Value="Aluno.endereco"
-                      Required="true"
-                      RequiredError="Campo obrigatório."
-                      Icon="Icons.Outlined.Description" />
+        <MudSelect T="string" Label="Status da Matrícula" @bind-Value="Matricula.Status_Matricula" Required="true" RequiredError="Campo obrigatório.">
+            <MudSelectItem Value="Ativa">Ativa</MudSelectItem>
+            <MudSelectItem Value="Trancada">Trancada</MudSelectItem>
+            <MudSelectItem Value="Cancelada">Cancelada</MudSelectItem>
+            <MudSelectItem Value="Concluída">Concluída</MudSelectItem>
+        </MudSelect>
 
         <div class="d-flex justify-end mt-6">
             <MudButton Variant="Variant.Filled"
@@ -55,7 +45,6 @@
                 Editar
             </MudButton>
         </div>
-
     </MudForm>
 </MudPaper>
 
@@ -63,34 +52,41 @@
     [Parameter]
     public int id { get; set; }
 
-    private MatriculaEdit Matricula = new(0,0,0,DateTime.Now,"");
+    private MatriculaEdit Matricula = new();
+    private List<AlunoResponse> Alunos = new();
+    private List<CursoResponse> Cursos = new();
     private string MensagemAlerta = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            var MatriculaResponse = await MatriculaAPI.GetMatriculaPorIdAsync(id);
-            if (MatriculaResponse != null)
+            var matriculaResponse = await MatriculaAPI.GetMatriculaPorIdAsync(id);
+            if (matriculaResponse != null)
             {
-                //Aluno = new AlunoEdit(AlunoResponse.Id_Aluno, AlunoResponse.nome, AlunoResponse.email, AlunoResponse.senha, DateTime.Now, AlunoResponse.telefone, AlunoResponse.endereco);
+                Matricula = new MatriculaEdit(
+                    matriculaResponse.Id_Matricula,
+                    matriculaResponse.Id_aluno,
+                    matriculaResponse.Id_Curso,
+                    matriculaResponse.Data_Matricula,
+                    matriculaResponse.Status_Matricula
+                );
             }
             else
             {
-                MensagemAlerta = "Matricula não encontrada!";
+                MensagemAlerta = "Matrícula não encontrada!";
+                return;
             }
+
+            Alunos = (await AlunoAPI.GetAlunosAsync()).ToList();
+            Cursos = (await CursoAPI.GetCursoAsync()).ToList();
+
         }
         catch (Exception ex)
         {
-            MensagemAlerta = $"Erro ao carregar a Matricula: {ex.Message}";
+            MensagemAlerta = $"Erro ao carregar os dados: {ex.Message}";
         }
     }
-
-
-    public PatternMask mask1 = new PatternMask("(##) #####-####")
-    {
-        MaskChars = new[] { new MaskChar('#', @"[0-9]") }
-    };
 
     private async Task Editar()
     {
@@ -102,29 +98,27 @@
 
         try
         {
-            Console.WriteLine("Iniciando atualização...");
-            var success = await MatriculaAPI.UpdateMatriculaAsync(Matricula);
-            if (success)
+            var sucesso = await MatriculaAPI.UpdateMatriculaAsync(Matricula);
+            if (sucesso)
             {
-                Console.WriteLine("Atualização bem-sucedida, navegando para /Alunos");
-                navigationManager.NavigateTo("/Matricula/");
+                navigationManager.NavigateTo("/Matriculas/");
             }
             else
             {
-                MensagemAlerta = "Erro ao atualizar o aluno!";
+                MensagemAlerta = "Erro ao atualizar a matrícula!";
             }
         }
         catch (Exception ex)
         {
-            MensagemAlerta = $"Erro ao atualizar o aluno: {ex.Message}";
+            MensagemAlerta = $"Erro ao atualizar a matrícula: {ex.Message}";
         }
     }
 
     private bool CamposVazios()
     {
-        return string.IsNullOrEmpty(Aluno.nome) ||
-        string.IsNullOrEmpty(Aluno.senha) ||
-        string.IsNullOrEmpty(Aluno.telefone) ||
-        string.IsNullOrEmpty(Aluno.email);
+        return Matricula.Id_Aluno == 0 ||
+               Matricula.Id_Curso == 0 ||
+               Matricula.Data_Matricula == default ||
+               string.IsNullOrWhiteSpace(Matricula.);
     }
 } *@

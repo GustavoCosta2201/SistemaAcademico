@@ -80,28 +80,38 @@
     }
 
 
-    public async Task onDeleteClick(int id)
+    private async Task onDeleteClick(int id)
     {
-        var result = await ProfessorAPI.DeleteProfessorAsync(id);
-
-        if (result)
+        var parameters = new DialogParameters
         {
+            { nameof(Popup.ContentText), "Você realmente quer excluir esse Professor(a)?" },
+            { nameof(Popup.ButtonText), "Deletar" },
+            { nameof(Popup.Color), Color.Error }
+        };
 
-            var ProfRemove = prof!.FirstOrDefault(e => e.Id_Professor == id);
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 
-            if (ProfRemove != null)
+        var dialog = DialogService.Show<Popup>("Confirmar Deleção", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            var success = await ProfessorAPI.DeleteProfessorAsync(id);
+
+            if (success)
             {
-                prof.Remove(ProfRemove);
-                TotalItens = prof.Count();
-                totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
-                PaginaMudou(paginaAtual);
-
+                var ProfRemover = prof!.FirstOrDefault(u => u.Id_Professor == id);
+                if (ProfRemover != null)
+                {
+                    prof!.Remove(ProfRemover);
+                    TotalItens = prof.Count();
+                    totalPaginas = (int)Math.Ceiling((TotalItens * 1.0) / tamanho);
+                    PaginaMudou(paginaAtual);
+                    StateHasChanged();
+                }
             }
-
         }
-        StateHasChanged();
     }
-
 
     private void PaginaMudou(int pageNumber)
     {

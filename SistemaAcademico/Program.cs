@@ -30,6 +30,7 @@ builder.Services.AddTransient<DAL<Nota>>();
 builder.Services.AddTransient<DAL<Professor>>();
 builder.Services.AddTransient<DAL<Turma>>();
 builder.Services.AddTransient<DAL<Frequencia>>();
+builder.Services.AddTransient<DAL<Financeiro>>();
 
 
 var app = builder.Build();
@@ -50,6 +51,7 @@ app.AddEndPointsProfessor();
 app.AddEndPointsTurma();
 app.AddEndPointsHorario();
 app.AddEndPointsFrequencia();
+app.AddEndPointsFinanceiro();
 
 
 app.UseHttpsRedirection();
