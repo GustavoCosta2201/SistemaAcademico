@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\3- Estudos\\C#\\SistemaAcademico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\cadastro\\cadastrarmatricula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\cadastro\\cadastrarmatricula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\request\\matricularequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\request\\matricularequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\request\\matriculaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\request\\matriculaedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\matricula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\matricula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\data\\academicocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\data\\academicocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\relatorioextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\relatorioextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\endpoints\\matriculaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\endpoints\\matriculaextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\relatorios\\relatoriodisciplina.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\relatorios\\relatoriodisciplina.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4F1686B-DFD0-42BC-B5FB-770335EAFD63}|SistemaAcademico\\SistemaAcademico.API.csproj|solutionrelative:sistemaacademico\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|c:\\3- estudos\\c#\\sistemaacademico\\sistemaacademico.web2\\views\\matricula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46E85938-D6C8-449C-83F4-7C814903B900}|SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj|solutionrelative:sistemaacademico.web2\\views\\matricula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,85 +30,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "RelatorioExtension.cs",
               "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
               "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
               "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
               "RelativeToolTip": "SistemaAcademico\\EndPoints\\RelatorioExtension.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAmwFsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:34:11.072Z",
+              "WhenOpened": "2025-06-21T21:47:38.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MatriculaEdit.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\MatriculaEdit.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Request\\MatriculaEdit.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\MatriculaEdit.cs",
-              "RelativeToolTip": "SistemaAcademico\\Request\\MatriculaEdit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:34:03.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MatriculaRequest.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\MatriculaRequest.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Request\\MatriculaRequest.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Request\\MatriculaRequest.cs",
-              "RelativeToolTip": "SistemaAcademico\\Request\\MatriculaRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:33:34.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MatriculaExtension.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\MatriculaExtension.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\EndPoints\\MatriculaExtension.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\EndPoints\\MatriculaExtension.cs",
-              "RelativeToolTip": "SistemaAcademico\\EndPoints\\MatriculaExtension.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:33:30.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AcademicoContext.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Data\\AcademicoContext.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Data\\AcademicoContext.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Data\\AcademicoContext.cs",
-              "RelativeToolTip": "SistemaAcademico\\Data\\AcademicoContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:32:33.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Matricula.cs",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Matricula.cs",
-              "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Matricula.cs",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Matricula.cs",
-              "RelativeToolTip": "SistemaAcademico\\Models\\Matricula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:09:51.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Nota.cs",
               "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico\\Models\\Nota.cs",
               "RelativeDocumentMoniker": "SistemaAcademico\\Models\\Nota.cs",
@@ -140,34 +51,19 @@
               "RelativeToolTip": "SistemaAcademico\\Models\\Nota.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:31:53.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T21:47:12.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CadastrarMatricula.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Cadastro\\CadastrarMatricula.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Cadastro\\CadastrarMatricula.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Cadastro\\CadastrarMatricula.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Cadastro\\CadastrarMatricula.razor",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RelatorioDisciplina.razor",
+              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Relatorios\\RelatorioDisciplina.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T20:26:03.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Matricula.razor",
-              "DocumentMoniker": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Matricula.razor",
-              "RelativeDocumentMoniker": "SistemaAcademico.Web2\\views\\Matricula.razor",
-              "ToolTip": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\views\\Matricula.razor",
-              "RelativeToolTip": "SistemaAcademico.Web2\\views\\Matricula.razor",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAUwKQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T20:25:28.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T21:36:49.137Z"
             }
           ]
         },

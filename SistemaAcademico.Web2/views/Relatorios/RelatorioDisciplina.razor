@@ -37,26 +37,33 @@
     private List<ChartSeries> Datasets = new();
 
     protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            var resultado = await RelatorioAPI.GetMediaNotasPorDisciplina();
-            Relatorio = resultado?.ToList() ?? new();
-
-            DisciplinaLabels = Relatorio.Select(r => r.NomeDisciplina).ToArray();
-
-   Datasets = new List<ChartSeries>
 {
-    new ChartSeries
+    try
     {
-        Name = "Média",
-        Data = Relatorio.Select(r => r.Media).ToArray()
-    }
-};
-        }
-        catch (Exception ex)
+        var resultado = await RelatorioAPI.GetMediaNotasPorDisciplina();
+        if (resultado == null || !resultado.Any())
         {
-            Console.WriteLine("Erro ao carregar relatório: " + ex.Message);
+            Console.WriteLine("API não retornou dados.");
         }
+        else
+        {
+            Console.WriteLine($"Retornou {resultado.Count()} registros.");
+        }
+        Relatorio = resultado?.ToList() ?? new();
+        DisciplinaLabels = Relatorio.Select(r => r.NomeDisciplina).ToArray();
+
+        Datasets = new List<ChartSeries>
+        {
+            new ChartSeries
+            {
+                Name = "Média",
+                Data = Relatorio.Select(r => r.Media).ToArray()
+            }
+        };
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Erro ao carregar relatório: " + ex.Message);
+    }
+}
 }
