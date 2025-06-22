@@ -1100,6 +1100,6 @@ C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\refint\
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\SistemaAcademico.Web2.pdb
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\ref\SistemaAcademico.Web2.dll
 C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\jv93kjchah-dtl26m38go.gz
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\bky4k2lh7w-tn9am19rpz.gz
-C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\dpklxnaubv-b1xqhv08s8.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\jv93kjchah-re4lf5hofu.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\bky4k2lh7w-taeks7zzm3.gz
+C:\3- Estudos\C#\SistemaAcademico\SistemaAcademico.Web2\obj\Debug\net8.0\compressed\dpklxnaubv-vp9w0jdhkk.gz

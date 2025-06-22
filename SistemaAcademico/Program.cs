@@ -55,6 +55,8 @@ app.UseHttpsRedirection();
 // ✅ UseCors DEVE vir antes dos endpoints e antes da autenticação
 app.UseCors("CorsPolicy");
 
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

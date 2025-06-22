@@ -44,7 +44,7 @@ namespace SistemaAcademico.EndPoints
 
             group.MapGet("/TurmaDisciplina", (
                 [FromServices] DAL<Turma> dalTurma,
-                [FromServices] DAL<Matricula> dalMatricula,
+                [FromServices] DAL<Nota> dalNota,
                 [FromServices] DAL<Disciplina> dalDisciplina,
                 [FromServices] DAL<Professor> dalProfessor
                 ) =>
@@ -56,7 +56,8 @@ namespace SistemaAcademico.EndPoints
                     var disciplina = dalDisciplina.GetItem(d => d.Id_Disciplina == t.Id_Disciplina);
                     var professor = dalProfessor.GetItem(p => p.Id_Professor == t.Id_Professor);
 
-                    var totalAlunos = dalMatricula.GetAll().Count(m => m.Id_Curso == disciplina.Id_Disciplina);
+                    // Conta alunos matriculados nessa turma com base nas notas
+                    var totalAlunos = dalNota.GetAll().Count(n => n.Id_Turma == t.Id_Turma);
 
                     return new RelatorioTurmaDisciplinaResponse
                     {
@@ -72,6 +73,7 @@ namespace SistemaAcademico.EndPoints
                 return Results.Ok(resultado);
             });
         }
+
 
         public static void AddEndPointsRelatorioStatusMatricula(this WebApplication app)
         {
