@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SistemaAcademico.Models;
 
 namespace SistemaAcademico.Data
 {
-    public class AcademicoContext: DbContext
+    public class AcademicoContext: IdentityDbContext<PessoaComAcesso, PerfilDeAcesso, int>
     {
 
         public DbSet<Aluno> Aluno { get; set; }

@@ -9,6 +9,20 @@
     <MudAppBar Elevation="0" Color="Color.Transparent" Fixed="true" Class="mud-appbar-transparent">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" OnClick="ToggleDrawer" Edge="Edge.Start" Color="Color.Inherit" />
         <MudText Typo="Typo.h6" Class="mud-appbar-title">@Title</MudText>
+
+               <AuthorizeView>
+            <Authorized>
+                <MudAvatar Color="Color.Default">
+                    <MudIcon Icon="@Icons.Material.Filled.Person"></MudIcon>
+                </MudAvatar>
+                <MudButton Class="ml-4" Href="logout" Variant="Variant.Outlined" Color="Color.Default">Logout</MudButton>
+            </Authorized>
+            <NotAuthorized>
+                <MudButton Class="ml-4" Href="login" Variant="Variant.Outlined" Color="Color.Default">Login</MudButton>
+            </NotAuthorized>
+        </AuthorizeView>
+
+
     </MudAppBar>
 
     <MudDrawer @bind-Open="_drawerOpen" Elevation="2" ClipMode="DrawerClipMode.Always">

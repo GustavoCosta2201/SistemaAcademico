@@ -1,0 +1,69 @@
+﻿@page "/register"
+@inject NavigationManager Navigation
+@inject SistemaAcademico.Web2.Services.AuthAPI AuthAPI
+
+<MudPaper Class="mx-auto my-8 p-6" Style="max-width:400px;">
+    <MudText Typo="Typo.h5" Class="mb-4" Align="Align.Center">Criar Conta</MudText>
+
+    <MudForm @ref="form" Validated="OnValidated">
+        <MudTextField @bind-Value="model.Nome" Label="Nome" Required="true" RequiredError="Nome é obrigatório" Variant="Variant.Outlined" Class="mb-3" />
+        <MudTextField @bind-Value="model.Email" Label="Email" Required="true" RequiredError="Email é obrigatório" Variant="Variant.Outlined" Class="mb-3" />
+        <MudTextField @bind-Value="model.Senha" Label="Senha" InputType="InputType.Password" Required="true" RequiredError="Senha é obrigatória" Variant="Variant.Outlined" Class="mb-3" />
+        <MudTextField @bind-Value="model.ConfirmarSenha" Label="Confirmar Senha" InputType="InputType.Password" Required="true" RequiredError="Confirme a senha" Variant="Variant.Outlined" Class="mb-4" />
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <MudText Color="Color.Error" Class="mb-3">@errorMessage</MudText>
+        }
+
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Disabled="!form.IsValid" OnClick="RegistrarAsync" Class="w-100">
+            Registrar
+        </MudButton>
+    </MudForm>
+</MudPaper>
+
+@code {
+    private MudForm? form;
+
+    private RegisterModel model = new();
+
+    private string? errorMessage;
+
+    private async Task RegistrarAsync()
+    {
+        await form!.Validate();
+
+        if (!form.IsValid)
+            return;
+
+        if (model.Senha != model.ConfirmarSenha)
+        {
+            errorMessage = "As senhas não coincidem.";
+            return;
+        }
+
+        var resultado = await AuthAPI.Cadastrar(model.Email, model.Senha);
+
+        if (resultado.Sucesso)
+        {
+            Navigation.NavigateTo("/login");
+        }
+        else
+        {
+            //errorMessage = resultado.Erros ?? "Erro ao registrar a conta.";
+        }
+    }
+
+    private void OnValidated()
+    {
+        errorMessage = null; // limpa mensagens ao validar
+    }
+
+    public class RegisterModel
+    {
+        public string? Nome { get; set; } // se quiser usar no backend, adapte
+        public string? Email { get; set; }
+        public string? Senha { get; set; }
+        public string? ConfirmarSenha { get; set; }
+    }
+}

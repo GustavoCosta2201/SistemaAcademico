@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/PLImw1mrVU=",
+  "dgSpecHash": "dbwUxgTsb0g=",
   "success": true,
   "projectFilePath": "C:\\3- Estudos\\C#\\SistemaAcademico\\SistemaAcademico.Web2\\SistemaAcademico.Web2.csproj",
   "expectedPackageFiles": [
@@ -13,9 +13,11 @@
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.16\\microsoft.aspnetcore.authorization.8.0.16.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.16\\microsoft.aspnetcore.components.8.0.16.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.16\\microsoft.aspnetcore.components.analyzers.8.0.16.nupkg.sha512",
+    "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\8.0.14\\microsoft.aspnetcore.components.authorization.8.0.14.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\8.0.16\\microsoft.aspnetcore.components.forms.8.0.16.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.16\\microsoft.aspnetcore.components.web.8.0.16.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.2\\microsoft.aspnetcore.components.webassembly.8.0.2.nupkg.sha512",
+    "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\9.0.6\\microsoft.aspnetcore.components.webassembly.authentication.9.0.6.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\8.0.2\\microsoft.aspnetcore.components.webassembly.devserver.8.0.2.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.16\\microsoft.aspnetcore.metadata.8.0.16.nupkg.sha512",
     "C:\\Users\\Gusta\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

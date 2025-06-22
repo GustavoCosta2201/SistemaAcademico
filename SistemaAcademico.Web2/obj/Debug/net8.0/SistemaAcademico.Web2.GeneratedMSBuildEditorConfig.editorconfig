@@ -68,6 +68,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = dmlld3NcRmluYW5jZWlyby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Matricula.razor]
 build_metadata.AdditionalFiles.TargetPath = dmlld3NcTWF0cmljdWxhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/QuadroHorario.razor]
 build_metadata.AdditionalFiles.TargetPath = dmlld3NcUXVhZHJvSG9yYXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcUmVkaXJlY3RUb0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Registrar.razor]
+build_metadata.AdditionalFiles.TargetPath = dmlld3NcUmVnaXN0cmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/3- Estudos/C\#/SistemaAcademico/SistemaAcademico.Web2/views/Relatorios/RelatorioDisciplina.razor]

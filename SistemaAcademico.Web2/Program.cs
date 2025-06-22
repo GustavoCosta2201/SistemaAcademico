@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
 using SistemaAcademico.Web2;
 using SistemaAcademico.Web2.Services;
+using WalletWatch.Web.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Components.Authorization;
 
 
 internal class Program
@@ -34,6 +37,10 @@ internal class Program
         builder.Services.AddScoped<FrequenciaAPI>();
         builder.Services.AddScoped<FinanceiroAPI>();
         builder.Services.AddScoped<RelatorioAPI>();
+        builder.Services.AddAuthorizationCore();
+        builder.Services.AddScoped<AuthenticationStateProvider, AuthAPI>();
+        builder.Services.AddScoped<AuthAPI>(sp => (AuthAPI)sp.GetRequiredService<AuthenticationStateProvider>());
+        builder.Services.AddScoped<CookieHandler>();
 
 
         builder.Services.AddMudServices();
@@ -42,8 +49,8 @@ internal class Program
         {
             client.BaseAddress = new Uri(builder.Configuration["APIServer:Url"]!);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-        });
+        }).AddHttpMessageHandler<CookieHandler>();
 
         await builder.Build().RunAsync();
     }
-}
+}   

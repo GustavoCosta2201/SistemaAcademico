@@ -1,0 +1,105 @@
+﻿@page "/login"
+@using Microsoft.AspNetCore.Authorization
+@using MudBlazor
+@inject AuthAPI AuthAPI
+@inject NavigationManager Navigation
+@attribute [AllowAnonymous]
+
+<MudPaper Class="mx-auto my-12 p-10" MaxWidth="400px" Elevation="6" Style="border-radius: 16px;">
+    <MudText Typo="Typo.h5" Class="mb-6 text-center">Bem-vindo!</MudText>
+
+    <AuthorizeView>
+        <Authorized>
+            <MudText Class="text-center" Color="Color.Success">
+                Você já está autenticado como <b>@context.User.Identity?.Name</b>.
+            </MudText>
+        </Authorized>
+
+        <NotAuthorized>
+            <MudForm @ref="form" Class="d-flex flex-column gap-4" >
+
+                <MudTextField T="string" Label="E-mail" @bind-Value="email"
+                              Required="true" RequiredError="O e-mail é obrigatório"
+                              Immediate="true" Variant="Variant.Outlined" />
+
+                <MudTextField T="string" Label="Senha" @bind-Value="senha"
+                              InputType="@passwordInputType"
+                              Required="true" RequiredError="A senha é obrigatória"
+                              Immediate="true" Variant="Variant.Outlined">
+                    <Adornment End>
+                        <MudIconButton Icon="@passwordIcon"
+                                       OnClick="@TogglePasswordVisibility"
+                                       Edge="Edge.End" />
+                    </Adornment>
+                </MudTextField>
+
+                @if (!string.IsNullOrEmpty(erro))
+                {
+                    <MudAlert Severity="Severity.Error" Elevation="0">@erro</MudAlert>
+                }
+
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+                           Disabled="@loading" OnClick="@FazerLogin">
+                    @if (loading)
+                    {
+                        <MudProgressCircular Indeterminate Color="Color.Inherit" Size="Size.Small" Class="me-2" />
+                        <span>Entrando...</span>
+                    }
+                    else
+                    {
+                        <span>Entrar</span>
+                    }
+                </MudButton>
+
+                <MudButton Variant="Variant.Text" Color="Color.Secondary" FullWidth="true"
+                           OnClick="@(() => Navigation.NavigateTo("/register"))">
+                    Registrar-se
+                </MudButton>
+
+            </MudForm>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudPaper>
+
+@code {
+    private string? email;
+    private string? senha;
+    private string? erro;
+    private bool loading = false;
+    private MudForm? form;
+    private bool showPassword = false;
+
+    [SupplyParameterFromQuery]
+    public string? ReturnUrl { get; set; }
+
+    private async Task FazerLogin()
+    {
+        erro = null;
+        await form!.Validate();
+
+        if (!form.IsValid)
+            return;
+
+        loading = true;
+
+        var resposta = await AuthAPI.LoginAsync(email!, senha!);
+        loading = false;
+
+        if (resposta.Sucesso)
+        {
+            Navigation.NavigateTo(ReturnUrl ?? "/");
+        }
+        else
+        {
+            erro = "Login inválido. Verifique suas credenciais.";
+        }
+    }
+
+    private void TogglePasswordVisibility()
+    {
+        showPassword = !showPassword;
+    }
+
+    private InputType passwordInputType => showPassword ? InputType.Text : InputType.Password;
+    private string passwordIcon => showPassword ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility;
+}
